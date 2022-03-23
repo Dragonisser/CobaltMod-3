@@ -1,11 +1,11 @@
 # CobaltMod-3
 
-###Info
+### Info
 
 This is yet another rewrite of this mod. Instead of using MinecraftForge it's going to rely on FabricMc
 
 
-###Description
+### Description
 
 This mod adds the ore Cobalt and a lot of other Stuff
 
