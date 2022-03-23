@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "mod_cobalt:cobalt_brick",
+	  "data": 0
+    }
+  },
+  "result": {
+    "item": "mod_cobalt:half_slab_cobalt",
+    "count": 6,
+	"data": 0
+  }
+}

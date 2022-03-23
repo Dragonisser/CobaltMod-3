@@ -1,0 +1,4 @@
+{
+	"bbhurt": {"category": "master","sounds": [{"name": "mod_cobalt:bbhurt","stream": false}]},
+	"bbdeath": {"category": "master","sounds": [{"name": "mod_cobalt:bbdeath","stream": false}]}
+}

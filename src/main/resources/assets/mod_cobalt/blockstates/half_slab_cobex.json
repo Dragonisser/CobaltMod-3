@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom,variant=default": { "model": "mod_cobalt:half_slab_cobex" },
+        "half=top,variant=default": { "model": "mod_cobalt:upper_slab_cobex" }
+    }
+}

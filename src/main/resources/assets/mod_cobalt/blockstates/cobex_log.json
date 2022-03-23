@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":    { "model": "mod_cobalt:cobex_log" },
+        "axis=z":     { "model": "mod_cobalt:cobex_log", "x": 90 },
+        "axis=x":     { "model": "mod_cobalt:cobex_log", "x": 90, "y": 90 },
+        "axis=none":   { "model": "mod_cobalt:cobex_bark" }
+    }
+}

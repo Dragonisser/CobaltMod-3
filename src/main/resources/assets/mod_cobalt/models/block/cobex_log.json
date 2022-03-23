@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "mod_cobalt:blocks/cobex_log_top",
+        "side": "mod_cobalt:blocks/cobex_log"
+    }
+}

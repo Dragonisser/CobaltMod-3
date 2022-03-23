@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "mod_cobalt:cobalt_ingot"
+    }
+  },
+  "result": {
+    "item": "mod_cobalt:cobalt_boots"
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "mod_cobalt:blocks/cobex_deadbush"
+    }
+}

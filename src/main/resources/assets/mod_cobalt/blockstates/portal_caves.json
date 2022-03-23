@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "axis=z": { "model": "mod_cobalt:portal_caves_ew" },
+        "axis=x": { "model": "mod_cobalt:portal_caves_ns" }
+    }
+}

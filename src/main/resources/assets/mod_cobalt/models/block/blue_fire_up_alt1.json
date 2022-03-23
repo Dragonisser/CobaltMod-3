@@ -1,0 +1,7 @@
+{
+    "parent": "mod_cobalt:block/blue_fire_up_alt",
+    "textures": {
+        "particle": "mod_cobalt:blocks/blue_fire_layer_1",
+        "fire": "mod_cobalt:blocks/blue_fire_layer_1"
+    }
+}

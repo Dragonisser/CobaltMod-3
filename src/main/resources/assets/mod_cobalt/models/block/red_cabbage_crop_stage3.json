@@ -1,0 +1,6 @@
+{
+    "parent": "mod_cobalt:block/crop_cross",
+    "textures": {
+        "cross": "mod_cobalt:blocks/red_cabbage_crop_stage_3"
+    }
+}

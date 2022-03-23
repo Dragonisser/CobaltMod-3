@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "check_decay=true,decayable=true":  { "model": "mod_cobalt:big_cobex_leaves" },
+        "check_decay=false,decayable=true":  { "model": "mod_cobalt:big_cobex_leaves" },
+        "check_decay=true,decayable=false":  { "model": "mod_cobalt:big_cobex_leaves" },
+        "check_decay=false,decayable=false":  { "model": "mod_cobalt:big_cobex_leaves" }
+    }
+}

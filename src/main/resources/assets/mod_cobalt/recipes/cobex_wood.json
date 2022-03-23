@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "planks",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "mod_cobalt:cobex_log",
+	  "data": 0
+    }
+  },
+  "result": {
+    "item": "mod_cobalt:cobex_wood",
+	"data": 0,
+    "count": 4
+  }
+}

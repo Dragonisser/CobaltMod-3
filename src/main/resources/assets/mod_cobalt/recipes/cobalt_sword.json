@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "mod_cobalt:cobex_stick"
+    },
+    "X": {
+      "item": "mod_cobalt:cobalt_ingot"
+    }
+  },
+  "result": {
+    "item": "mod_cobalt:cobalt_sword"
+  }
+}

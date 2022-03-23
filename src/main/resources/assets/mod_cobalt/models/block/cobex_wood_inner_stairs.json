@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "mod_cobalt:blocks/cobex_wood",
+        "top": "mod_cobalt:blocks/cobex_wood",
+        "side": "mod_cobalt:blocks/cobex_wood"
+    }
+}

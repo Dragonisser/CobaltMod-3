@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "mod_cobalt:waterthorn" },
+            { "model": "mod_cobalt:waterthorn", "y": 90 },
+            { "model": "mod_cobalt:waterthorn", "y": 180 },
+            { "model": "mod_cobalt:waterthorn", "y": 270 }
+        ]
+    }
+}

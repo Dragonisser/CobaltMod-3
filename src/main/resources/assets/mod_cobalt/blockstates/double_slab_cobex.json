@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "variant=default": { "model": "mod_cobalt:cobex_wood" }
+    }
+}

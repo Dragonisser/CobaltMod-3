@@ -1,0 +1,6 @@
+{
+    "parent": "block/torch_wall",
+    "textures": {
+        "torch": "mod_cobalt:blocks/cobex_torch_on"
+    }
+}

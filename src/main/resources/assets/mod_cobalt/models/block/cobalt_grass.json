@@ -1,0 +1,10 @@
+{
+    "parent": "block/grass",
+    "textures": {
+        "particle": "mod_cobalt:blocks/cobalt_dirt",
+        "bottom": "mod_cobalt:blocks/cobalt_dirt",
+        "top": "mod_cobalt:blocks/cobalt_grass_top",
+        "side": "mod_cobalt:blocks/cobalt_grass",
+        "overlay": "mod_cobalt:blocks/cobalt_grass"
+    }
+}

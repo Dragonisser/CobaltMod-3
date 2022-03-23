@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "mod_cobalt:portal_frame_caves" }
+    }
+}

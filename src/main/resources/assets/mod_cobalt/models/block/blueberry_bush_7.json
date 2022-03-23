@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "mod_cobalt:blocks/blueberry_bush_7"
+    }
+}

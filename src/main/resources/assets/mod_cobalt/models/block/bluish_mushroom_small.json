@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "mod_cobalt:blocks/bluish_mushroom_small"
+    }
+}

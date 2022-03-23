@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "mod_cobalt:cobalt_grass"
+        },
+        "title": {
+            "translate": "advancements.mod_cobalt.root.title"
+        },
+        "description": {
+            "translate": "advancements.mod_cobalt.root.description"
+        },
+        "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+        "show_toast": false,
+        "announce_to_chat": true
+    },
+    "criteria": {
+    "to_cobaldis": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "cobaldis"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "to_cobaldis"
+    ]
+  ]
+}

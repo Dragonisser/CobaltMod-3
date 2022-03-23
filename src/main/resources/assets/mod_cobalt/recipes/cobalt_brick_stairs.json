@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "mod_cobalt:cobalt_brick",
+	  "data": 0
+    }
+  },
+  "result": {
+    "item": "mod_cobalt:cobalt_brick_stairs",
+    "count": 4
+  }
+}

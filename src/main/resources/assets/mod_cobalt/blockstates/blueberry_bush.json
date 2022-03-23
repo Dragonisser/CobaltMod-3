@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "mod_cobalt:blueberry_bush_0" },
+        "age=1": { "model": "mod_cobalt:blueberry_bush_0" },
+        "age=2": { "model": "mod_cobalt:blueberry_bush_0" },
+        "age=3": { "model": "mod_cobalt:blueberry_bush_0" },
+        "age=4": { "model": "mod_cobalt:blueberry_bush_0" },
+        "age=5": { "model": "mod_cobalt:blueberry_bush_0" },
+        "age=6": { "model": "mod_cobalt:blueberry_bush_0" },
+        "age=7": { "model": "mod_cobalt:blueberry_bush_7" }
+    }
+}

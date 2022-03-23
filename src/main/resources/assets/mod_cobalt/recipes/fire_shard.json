@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#X#"
+  ],
+  "key": {
+    "#": {
+      "item": "mod_cobalt:cobalt_nugget"
+    },
+	"X": {
+      "item": "minecraft:flint"
+    }
+  },
+  "result": {
+    "item": "mod_cobalt:fire_shard"
+  }
+}

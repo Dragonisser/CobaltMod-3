@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "mod_cobalt:cobalt_ore"
+        },
+        "title": {
+            "translate": "advancements.mod_cobalt.mine_cobaltore.title"
+        },
+        "description": {
+            "translate": "advancements.mod_cobalt.mine_cobaltore.description"
+        }
+    },
+    "parent": "mod_cobalt:root",
+    "criteria": {
+        "get_cobaltore": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "mod_cobalt:cobalt_ore"
+                    }
+                ]
+            }
+        }
+    }
+}
