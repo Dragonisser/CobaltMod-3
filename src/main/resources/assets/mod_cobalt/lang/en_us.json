@@ -148,11 +148,14 @@
     "entity.mod_cobalt.BlueSlime": "Blue Slime",
 
 
-    "advancements.mod_cobalt.root.title": "The other side",
-    "advancements.mod_cobalt.root.description": "Reach Cobaldis through its portal",
+    "advancements.mod_cobalt.story.root.title": "Cobalt Mod",
+    "advancements.mod_cobalt.story.root.description": "Find the Plague",
 
-    "advancements.mod_cobalt.mine_cobalt_ore.title": "Blue like the everything else",
-    "advancements.mod_cobalt.mine_cobalt_ore.description": "Mine some cobalt ore",
+    "advancements.mod_cobalt.story.mine_cobalt_ore.title": "Blue like the everything else",
+    "advancements.mod_cobalt.story.mine_cobalt_ore.description": "Mine some cobalt ore",
+
+    "advancements.mod_cobalt.story.travel_to_cobaldis.title": "The other side",
+    "advancements.mod_cobalt.story.travel_to_cobaldis.description": "Reach Cobaldis through its portal",
 
 
 
