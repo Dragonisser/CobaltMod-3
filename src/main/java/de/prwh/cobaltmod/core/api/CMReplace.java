@@ -3,6 +3,7 @@ package de.prwh.cobaltmod.core.api;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import net.minecraft.block.Block;
 
@@ -16,7 +17,7 @@ public class CMReplace {
 	 * 
 	 * @return map
 	 */
-	public static HashMap<Block, Block> getSpread() {
+	public static Map<Block, Block> getSpread() {
 		return map;
 	}
 	

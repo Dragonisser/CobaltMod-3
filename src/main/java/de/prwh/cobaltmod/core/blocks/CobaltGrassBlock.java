@@ -47,7 +47,7 @@ public class CobaltGrassBlock extends Block {
                 for(int i = 0; i < 4; ++i) {
                     BlockPos blockPos = pos.add(random.nextInt(3) - 1, random.nextInt(5) - 3, random.nextInt(3) - 1);
                     if (world.getBlockState(blockPos).isOf(CMContent.COBALT_DIRT) && canSpread(blockState, world, blockPos)) {
-                        world.setBlockState(blockPos, (BlockState)blockState);
+                        world.setBlockState(blockPos, blockState);
                     }
                 }
             }
