@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "mod_cobalt:cobalt_grass" }
+        "": { "model": "mod_cobalt:block/cobalt_grass" }
     }
 }

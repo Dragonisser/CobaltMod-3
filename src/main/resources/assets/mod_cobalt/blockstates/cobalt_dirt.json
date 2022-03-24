@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "mod_cobalt:cobalt_dirt" }
+        "": { "model": "mod_cobalt:block/cobalt_dirt" }
     }
 }
