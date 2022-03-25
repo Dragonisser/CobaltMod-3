@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "mod_cobalt:cobalt_brick" }
+        "": { "model": "mod_cobalt:block/cobalt_brick" }
     }
 }

@@ -2,12 +2,21 @@ package de.prwh.cobaltmod.core.api;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.particle.DefaultParticleType;
 
 /**
  * Contains all the Blocks or Item the Mod has added
  */
 public enum CMContent {
 	INSTANCE;
+
+	//ItemGroup
+	public static ItemGroup BLOCK_GROUP;
+	public static ItemGroup ITEM_GROUP;
+
+	//Particle
+	public static DefaultParticleType COBALT_AURA;
 
 	// ToolMaterial
 	// public static ToolMaterial COBALT_TOOL;

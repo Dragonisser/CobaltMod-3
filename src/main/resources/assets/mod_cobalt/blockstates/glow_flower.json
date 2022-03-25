@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "mod_cobalt:glow_flower" }
+        "": { "model": "mod_cobalt:block/glow_flower" }
     }
 }

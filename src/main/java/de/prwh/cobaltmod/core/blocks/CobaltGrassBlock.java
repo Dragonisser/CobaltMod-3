@@ -3,7 +3,11 @@ package de.prwh.cobaltmod.core.blocks;
 import de.prwh.cobaltmod.core.api.CMContent;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.particle.ParticleTypes;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.tag.FluidTags;
 import net.minecraft.util.math.BlockPos;
@@ -59,8 +63,22 @@ public class CobaltGrassBlock extends Block {
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         super.randomDisplayTick(state, world, pos, random);
         if (random.nextInt(10) == 0) {
-            world.addParticle(ParticleTypes.MYCELIUM, (double)pos.getX() + random.nextDouble(), (double)pos.getY() + 1.1D, (double)pos.getZ() + random.nextDouble(), 0.0D, 0.0D, 0.0D);
+            world.addParticle(CMContent.COBALT_AURA, (double)pos.getX() + random.nextDouble(), (double)pos.getY() + 1.1D, (double)pos.getZ() + random.nextDouble(), 0.0D, 0.0D, 0.0D);
         }
 
+    }
+
+    @Override
+    public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
+        //TODO adjust for different boot types
+        if (!entity.isFireImmune() && entity instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity)entity)) {
+            entity.damage(DamageSource.MAGIC, 1.0F);
+        }
+
+        if (entity instanceof ServerPlayerEntity) {
+            //TODO trigger advancement
+        }
+
+        super.onSteppedOn(world, pos, state, entity);
     }
 }

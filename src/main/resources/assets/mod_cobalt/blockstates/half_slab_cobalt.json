@@ -1,6 +1,6 @@
 {
     "variants": {
-        "half=bottom,variant=default": { "model": "mod_cobalt:half_slab_cobalt" },
-        "half=top,variant=default": { "model": "mod_cobalt:upper_slab_cobalt" }
+        "half=bottom,variant=default": { "model": "mod_cobalt:block/half_slab_cobalt" },
+        "half=top,variant=default": { "model": "mod_cobalt:block/upper_slab_cobalt" }
     }
 }

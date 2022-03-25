@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "mod_cobalt:hardened_corrupted_stone" }
+        "": { "model": "mod_cobalt:block/hardened_corrupted_stone" }
     }
 }

@@ -21,6 +21,12 @@
   "entrypoints": {
     "main": [
       "de.prwh.cobaltmod.core.CobaltMod"
+    ],
+    "client": [
+      "de.prwh.cobaltmod.core.CobaltModClient"
+    ],
+    "server": [
+      "de.prwh.cobaltmod.core.CobaltModServer"
     ]
   },
   "mixins": [

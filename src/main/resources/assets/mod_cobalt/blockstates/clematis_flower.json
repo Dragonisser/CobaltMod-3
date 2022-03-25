@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "mod_cobalt:clematis_flower" }
+        "": { "model": "mod_cobalt:block/clematis_flower" }
     }
 }
