@@ -71,12 +71,13 @@ public class CobaltGrassBlock extends Block {
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         //TODO adjust for different boot types
-        if (!entity.isFireImmune() && entity instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity)entity)) {
+        if (!entity.isFireImmune() && entity instanceof LivingEntity livingEntity && !EnchantmentHelper.hasFrostWalker(livingEntity)) {
             entity.damage(DamageSource.MAGIC, 1.0F);
         }
 
-        if (entity instanceof ServerPlayerEntity) {
+        if (entity instanceof ServerPlayerEntity serverPlayerEntity) {
             //TODO trigger advancement
+            //serverPlayerEntity.getAdvancementTracker().grantCriterion("mod_cobalt:", "")
         }
 
         super.onSteppedOn(world, pos, state, entity);

@@ -19,7 +19,7 @@ public class CMBlocks {
 
     public static void init() {
         CMContent.COBALT_ORE = addBlock(new Block(FabricBlockSettings.of(Material.STONE).strength(5.0F).sounds(BlockSoundGroup.STONE)), "cobalt_ore");
-        CMContent.COBALT_GRASS_BLOCK = addBlock(new CobaltGrassBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRASS)), "cobalt_grass");
+        CMContent.COBALT_GRASS_BLOCK = addBlock(new CobaltGrassBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRASS)), "cobalt_grass_block");
         CMContent.COBALT_DIRT = addBlock(new Block(FabricBlockSettings.of(Material.SOIL).strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "cobalt_dirt");
         CMContent.COBALT_BLOCK = addBlock(new Block(FabricBlockSettings.of(Material.METAL).strength(5.0F).sounds(BlockSoundGroup.METAL)), "cobalt_block");
         CMContent.COBEX_LOG = addBlock(new PillarBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD)), "cobex_log");

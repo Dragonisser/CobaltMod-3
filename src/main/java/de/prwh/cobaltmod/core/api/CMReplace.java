@@ -9,8 +9,12 @@ import net.minecraft.block.Block;
 
 public class CMReplace {
 
-	private static HashMap<Block, Block> map = new HashMap<>();
-	private static List<Block> listFlowers = new ArrayList<>();
+	private static final HashMap<Block, Block> map = new HashMap<>();
+	private static final List<Block> listFlowers = new ArrayList<>();
+
+	private CMReplace() {
+		throw new IllegalStateException("Utility class");
+	}
 
 	/***
 	 * Gets the map of blocks

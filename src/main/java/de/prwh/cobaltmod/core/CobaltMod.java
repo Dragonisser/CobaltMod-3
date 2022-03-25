@@ -1,10 +1,12 @@
 package de.prwh.cobaltmod.core;
 
 import de.prwh.cobaltmod.core.api.CMContent;
+import de.prwh.cobaltmod.core.api.CMReplace;
 import de.prwh.cobaltmod.core.blocks.CMBlocks;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -36,5 +38,21 @@ public class CobaltMod implements ModInitializer {
         Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "cobalt_aura"), CMContent.COBALT_AURA);
 
         CMBlocks.init();
+
+        CMReplace.addBlocks(CMContent.COBALT_DIRT, CMContent.COBALT_GRASS_BLOCK);
+        CMReplace.addBlocks(Blocks.DIRT, CMContent.COBALT_GRASS_BLOCK);
+        CMReplace.addBlocks(Blocks.GRASS, CMContent.COBALT_GRASS_BLOCK);
+        CMReplace.addBlocks(Blocks.ACACIA_LOG, CMContent.COBEX_LOG);
+        CMReplace.addBlocks(Blocks.BIRCH_LOG, CMContent.COBEX_LOG);
+        CMReplace.addBlocks(Blocks.DARK_OAK_LOG, CMContent.COBEX_LOG);
+        CMReplace.addBlocks(Blocks.JUNGLE_LOG, CMContent.COBEX_LOG);
+        CMReplace.addBlocks(Blocks.OAK_LOG, CMContent.COBEX_LOG);
+        CMReplace.addBlocks(Blocks.SPRUCE_LOG, CMContent.COBEX_LOG);
+        CMReplace.addBlocks(Blocks.GRASS, CMContent.BLUE_TALL_GRASS);
+        CMReplace.addBlocks(Blocks.TALL_GRASS, CMContent.BLUE_TALL_GRASS);
+
+        CMReplace.addFlowers(CMContent.CLEMATIS_FLOWER);
+        CMReplace.addFlowers(CMContent.BELL_FLOWER);
+        CMReplace.addFlowers(CMContent.GLOW_FLOWER);
     }
 }
