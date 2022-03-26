@@ -4,6 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.util.registry.RegistryEntry;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.TreeFeatureConfig;
 
 /**
  * Contains all the Blocks or Item the Mod has added
@@ -17,6 +20,9 @@ public enum CMContent {
 
 	//Particle
 	public static DefaultParticleType COBALT_AURA;
+
+	//Trees
+	public static RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> COBEX;
 
 	// ToolMaterial
 	// public static ToolMaterial COBALT_TOOL;
@@ -33,9 +39,10 @@ public enum CMContent {
 	public static Block COBALT_GRASS_BLOCK;
 	public static Block COBALT_BLOCK;
 	public static Block COBEX_LOG;
-	public static Block COBEX_WOOD;
+	public static Block COBEX_PLANKS;
 	public static Block COBEX_LEAVES;
 	public static Block COBEX_SAPLING;
+	public static Block BLUE_GRASS;
 //	public static BlockSlab COBALT_HALF_SLAB;
 //	public static BlockSlab COBALT_DOUBLE_SLAB;
 	public static Block CLEMATIS_FLOWER;
@@ -84,7 +91,6 @@ public enum CMContent {
 	public static Block PODIUM;
 	public static Block BIG_COBEX_SAPLING;
 	public static Block BIG_COBEX_LEAVES;
-	public static Block BLUE_TALL_GRASS;
 	public static Block CORRUPTED_STONE_FURNACE_BURNING;
 	public static Block CORRUPTED_STONE_FURNACE_IDLE;
 	public static Block LOCKED_COBALT_CHEST;

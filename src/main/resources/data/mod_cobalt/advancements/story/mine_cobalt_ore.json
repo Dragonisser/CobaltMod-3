@@ -2,8 +2,7 @@
   "parent": "mod_cobalt:story/travel_to_cobaldis",
   "display": {
     "icon": {
-      "item": "minecraft:wooden_pickaxe",
-      "nbt": "{Damage:0}"
+      "item": "mod_cobalt:cobalt_ore"
     },
     "title": {
       "translate": "advancements.mod_cobalt.story.mine_cobalt_ore.title"
@@ -23,7 +22,7 @@
         "items": [
           {
             "items": [
-              "minecraft:cobblestone"
+              "mod_cobalt:cobalt_ore"
             ]
           }
         ]

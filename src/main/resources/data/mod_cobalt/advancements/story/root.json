@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:stone"
+      "item": "mod_cobalt:cobalt_grass_block"
     },
     "title": {
       "translate": "advancements.mod_cobalt.story.root.title"
@@ -17,10 +17,7 @@
   },
   "criteria": {
     "step_on_block": {
-      "trigger": "minecraft:enter_block",
-      "conditions": {
-        "block": "minecraft:grass"
-      }
+      "trigger": "minecraft:impossible"
     }
   },
   "requirements": [

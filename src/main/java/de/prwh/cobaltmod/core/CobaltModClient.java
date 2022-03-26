@@ -12,6 +12,10 @@ public class CobaltModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(CMContent.COBEX_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(CMContent.BLUE_GRASS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(CMContent.CLEMATIS_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(CMContent.BELL_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(CMContent.GLOW_FLOWER, RenderLayer.getCutout());
 
         ParticleFactoryRegistry.getInstance().register(CMContent.COBALT_AURA, SuspendParticle.MyceliumFactory::new);
     }
