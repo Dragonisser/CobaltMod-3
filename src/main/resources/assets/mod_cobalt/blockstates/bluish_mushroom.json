@@ -1,6 +1,6 @@
 {
     "variants": {
-        "variations=big": { "model": "mod_cobalt:bluish_mushroom_big" },
-		"variations=small": { "model": "mod_cobalt:bluish_mushroom_small" }
+        "variations=big": { "model": "mod_cobalt:block/bluish_mushroom_big" },
+		"variations=small": { "model": "mod_cobalt:block/bluish_mushroom_small" }
     }
 }

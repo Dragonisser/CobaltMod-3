@@ -1,0 +1,7 @@
+{
+    "parent": "mod_cobalt:block/template_farmland",
+    "textures": {
+        "dirt": "mod_cobalt:blocks/cobalt_dirt",
+        "top": "mod_cobalt:blocks/farmland"
+    }
+}
