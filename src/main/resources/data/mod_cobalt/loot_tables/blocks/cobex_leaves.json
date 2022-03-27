@@ -96,7 +96,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "minecraft:stick"
+          "name": "mod_cobalt:cobex_stick"
         }
       ],
       "conditions": [

@@ -1,8 +1,0 @@
-{
-    "parent": "block/farmland",
-    "textures": {
-        "particle": "mod_cobalt:blocks/cobalt_dirt",
-        "dirt": "mod_cobalt:blocks/cobalt_dirt",
-        "top": "mod_cobalt:blocks/cobalt_farmland_wet"
-    }
-}

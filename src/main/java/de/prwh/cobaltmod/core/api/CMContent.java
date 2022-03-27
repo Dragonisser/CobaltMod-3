@@ -1,6 +1,7 @@
 package de.prwh.cobaltmod.core.api;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.particle.DefaultParticleType;
@@ -23,6 +24,9 @@ public enum CMContent {
 
 	//Trees
 	public static RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> COBEX;
+
+	//FoodComponents
+	//public static FoodComponent
 
 	// ToolMaterial
 	// public static ToolMaterial COBALT_TOOL;
@@ -87,7 +91,7 @@ public enum CMContent {
 	public static Block WATER_THORN;
 	public static Block CORRUPTED_STONE;
 	public static Block COBALT_DIRT;
-	public static Block COBALT_FARMLAND;
+	public static Block FARMLAND;
 	public static Block PODIUM;
 	public static Block BIG_COBEX_SAPLING;
 	public static Block BIG_COBEX_LEAVES;
@@ -112,13 +116,14 @@ public enum CMContent {
 	public static Item COBALT_SWORD;
 	public static Item COBALT_HOE;
 	public static Item COBALT_INGOT;
+	public static Item RAW_COBALT;
 	public static Item COBALT_APPLE;
 	public static Item COBEX_STICK;
 	public static Item COBEX_BOW;
 	public static Item COBEX_ARROW;
 	public static Item RED_CABBAGE_SEEDS;
 	public static Item RED_CABBAGE;
-	public static Item RED_CABBAGE_COOKED;
+	public static Item COOKED_RED_CABBAGE;
 	public static Item COBALT_HELMET;
 	public static Item COBALT_CHEST_PLATE;
 	public static Item COBALT_LEGGINGS;

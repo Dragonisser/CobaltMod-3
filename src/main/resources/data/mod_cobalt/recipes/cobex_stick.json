@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "mod_cobalt:cobex_planks"
+    }
+  },
+  "result": {
+    "item": "mod_cobalt:cobex_stick",
+    "count": 4
+  }
+}

@@ -12,6 +12,7 @@ public final class CMBlockTags {
     public static final TagKey<Block> LOGS_THAT_BURN = register("logs_that_burn");
     public static final TagKey<Block> COBEX_LOGS = register("cobex_logs");
     public static final TagKey<Block> DIRT = register("dirt");
+    public static final TagKey<Block> FARMLAND = register("farmland");
 
     private CMBlockTags() {
     }
