@@ -22,6 +22,7 @@ public class CMBlocks {
 
     public static void init() {
         CMContent.COBALT_ORE = addBlock("cobalt_ore", new OreBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)));
+        CMContent.CORRUPTED_STONE = addBlock("corrupted_stone", new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F)));
         CMContent.COBALT_GRASS_BLOCK = addBlock("cobalt_grass_block", new CobaltGrassBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRASS)));
         CMContent.COBALT_DIRT = addBlock("cobalt_dirt", new Block(FabricBlockSettings.of(Material.SOIL).strength(0.5F).sounds(BlockSoundGroup.GRAVEL)));
         CMContent.COBALT_BLOCK = addBlock("cobalt_block", new Block(FabricBlockSettings.of(Material.METAL).requiresTool().strength(5.0F, 6.0F).sounds(BlockSoundGroup.METAL)));
