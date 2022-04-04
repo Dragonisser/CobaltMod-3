@@ -1,6 +1,6 @@
 {
     "parent": "block/cross",
     "textures": {
-        "cross": "mod_cobalt:blocks/blue_grass"
+        "cross": "mod_cobalt:block/blue_grass"
     }
 }

@@ -1,0 +1,13 @@
+{
+    "variants": {
+        "type=bottom": {
+            "model": "mod_cobalt:block/cobex_slab"
+        },
+        "type=double": {
+            "model": "mod_cobalt:block/cobex_planks"
+        },
+        "type=top": {
+            "model": "mod_cobalt:block/cobex_slab_top"
+        }
+    }
+}

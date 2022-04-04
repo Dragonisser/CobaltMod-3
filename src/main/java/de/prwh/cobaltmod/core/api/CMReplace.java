@@ -3,6 +3,7 @@ package de.prwh.cobaltmod.core.api;
 import java.util.*;
 
 import de.prwh.cobaltmod.core.CobaltMod;
+import de.prwh.cobaltmod.core.blocks.CMBlocks;
 import de.prwh.cobaltmod.core.blocks.CobaltGrassBlock;
 import net.minecraft.block.*;
 import net.minecraft.state.property.EnumProperty;
@@ -88,7 +89,7 @@ public class CMReplace {
 		if (CMReplace.getSpread().containsKey(blockOverride)) {
 			if (blockStateNew.getBlock() instanceof CobaltGrassBlock) {
 				if(!canSpread(blockStateNew, world, blockPos)) {
-					world.setBlockState(blockPos, CMContent.COBALT_DIRT.getDefaultState());
+					world.setBlockState(blockPos, CMBlocks.COBALT_DIRT.getDefaultState());
 					return false;
 				}
 			}

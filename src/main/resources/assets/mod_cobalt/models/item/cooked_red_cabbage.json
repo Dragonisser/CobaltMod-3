@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "mod_cobalt:items/cooked_red_cabbage"
+        "layer0": "mod_cobalt:item/cooked_red_cabbage"
     }
 }

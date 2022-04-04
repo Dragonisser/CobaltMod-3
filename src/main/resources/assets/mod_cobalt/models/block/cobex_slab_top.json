@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "mod_cobalt:block/cobex_planks",
+    "top": "mod_cobalt:block/cobex_planks",
+    "side": "mod_cobalt:block/cobex_planks"
+  }
+}

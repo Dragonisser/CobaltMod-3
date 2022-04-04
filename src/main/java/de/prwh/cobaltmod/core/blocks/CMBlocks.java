@@ -1,13 +1,13 @@
 package de.prwh.cobaltmod.core.blocks;
 
 import de.prwh.cobaltmod.core.CobaltMod;
-import de.prwh.cobaltmod.core.api.CMContent;
 import de.prwh.cobaltmod.core.blocks.sapling.CobexSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
@@ -18,38 +18,116 @@ import net.minecraft.world.BlockView;
 
 public class CMBlocks {
 
-    private CMBlocks() {}
+    // Blocks
+    public static Block COBALT_ORE;
+    public static Block COBALT_GRASS_BLOCK;
+    public static Block COBALT_BLOCK;
+    public static Block COBEX_LOG;
+    public static Block COBEX_PLANKS;
+    public static Block COBEX_LEAVES;
+    public static Block COBEX_SAPLING;
+    public static Block BLUE_GRASS;
+    //	public static BlockSlab COBALT_HALF_SLAB;
+//	public static BlockSlab COBALT_DOUBLE_SLAB;
+    public static Block CLEMATIS_FLOWER;
+    public static Block RED_CABBAGE_CROP;
+    public static Block COBALT_BRICK;
+    public static Block COBALT_BRICK_STAIR;
+    public static Block COBALT_STONE;
+    //	public static BlockPortal PORTAL_COBALDIS;
+    public static Block COBEX_TORCH;
+    public static Block COBEX_WALL_TORCH;
+
+    public static Block BLUEBERRY_BUSH;
+    public static Block RITUAL_STONE;
+    public static Block ALTAR_OF_ASSOCIATION;
+    public static Block COBEX_STAIR;
+
+    public static Block COBEX_SLAB;
+
+    public static Block BLUE_FIRE;
+    public static Block BELL_FLOWER;
+    public static Block BOUNCY_COBALT;
+    public static Block COBALT_FURNACE_IDLE;
+    public static Block COBALT_FURNACE_BURNING;
+    public static Block COBEX_CHEST;
+    public static Block COBEX_DOOR;
+    public static Block COBALT_DOOR;
+    public static Block PORTAL_FRAME;
+    public static Block COBEX_WORK_BENCH;
+    public static Block COBALT_BED;
+    public static Block DARK_WATER;
+    public static Block COBALT_RUNE;
+    public static Block CARTHUN_ORE;
+    public static Block CARTHUN_BLOCK;
+    public static Block CARTHUN_BRICK;
+    public static Block CARTHUN_BRICK_STAIR;
+
+//	public static BlockSlab CARTHUN_BRICK_SINGLE_SLAB;
+//	public static BlockSlab CARTHUN_BRICK_DOUBLE_SLAB;
+
+    public static Block GLOW_FLOWER;
+    public static Block BLUE_VINE;
+    public static Block WATER_THORN;
+    public static Block CORRUPTED_STONE;
+    public static Block COBALT_DIRT;
+    public static Block FARMLAND;
+    public static Block PODIUM;
+    public static Block BIG_COBEX_SAPLING;
+    public static Block BIG_COBEX_LEAVES;
+    public static Block CORRUPTED_STONE_FURNACE_BURNING;
+    public static Block CORRUPTED_STONE_FURNACE_IDLE;
+    public static Block LOCKED_COBALT_CHEST;
+    public static Block COBALT_CHEST;
+
+    public static Block HARDENED_CORRUPTED_STONE;
+    public static Block PORTAL_FRAME_CAVES;
+    //	public static BlockPortal PORTAL_CAVES;
+    public static Block BLUISH_MUSHROOM;
+    public static Block COBEX_DEAD_BUSH;
+
+    public static Block NEUTRALIZER_BURNING;
+    public static Block NEUTRALIZER_IDLE;
+
+    private CMBlocks() {
+    }
 
     public static void init() {
-        CMContent.COBALT_ORE = addBlock("cobalt_ore", new OreBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)));
-        CMContent.CORRUPTED_STONE = addBlock("corrupted_stone", new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F)));
-        CMContent.COBALT_GRASS_BLOCK = addBlock("cobalt_grass_block", new CobaltGrassBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRASS)));
-        CMContent.COBALT_DIRT = addBlock("cobalt_dirt", new Block(FabricBlockSettings.of(Material.SOIL).strength(0.5F).sounds(BlockSoundGroup.GRAVEL)));
-        CMContent.COBALT_BLOCK = addBlock("cobalt_block", new Block(FabricBlockSettings.of(Material.METAL).requiresTool().strength(5.0F, 6.0F).sounds(BlockSoundGroup.METAL)));
-        CMContent.COBEX_LOG = addBlock("cobex_log", new PillarBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD)));
-        CMContent.COBEX_PLANKS = addBlock("cobex_planks", new Block(FabricBlockSettings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD)));
-        CMContent.COBEX_LEAVES = addBlock("cobex_leaves", createLeavesBlock());
-        CMContent.COBEX_SAPLING = addBlock("cobex_sapling", new CMSaplingBlock(new CobexSaplingGenerator(), FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
-        CMContent.BLUE_GRASS = addBlock("blue_grass", new CMFernBlock(FabricBlockSettings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
-        CMContent.CLEMATIS_FLOWER = addBlock("clematis_flower", new CMFernBlock(FabricBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
-        CMContent.BELL_FLOWER = addBlock("bell_flower", new CMFernBlock(FabricBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
-        CMContent.GLOW_FLOWER = addBlock("glow_flower", new CMFernBlock(FabricBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque().luminance(10)));
-        CMContent.RED_CABBAGE_CROP = addBlock("red_cabbage_crop", new RedCabbageBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)), false);
-        CMContent.FARMLAND = addBlock("farmland", new CMFarmlandBlock(FabricBlockSettings.of(Material.SOIL).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRAVEL).blockVision(CMBlocks::always).suffocates(CMBlocks::always)));
+        COBALT_ORE = addBlock("cobalt_ore", new OreBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)));
+        CORRUPTED_STONE = addBlock("corrupted_stone", new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F)));
+        COBALT_GRASS_BLOCK = addBlock("cobalt_grass_block", new CobaltGrassBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRASS)));
+        COBALT_DIRT = addBlock("cobalt_dirt", new Block(FabricBlockSettings.of(Material.SOIL).strength(0.5F).sounds(BlockSoundGroup.GRAVEL)));
+        COBALT_BLOCK = addBlock("cobalt_block", new Block(FabricBlockSettings.of(Material.METAL).requiresTool().strength(5.0F, 6.0F).sounds(BlockSoundGroup.METAL)));
+        COBEX_LOG = addBlock("cobex_log", new PillarBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD)));
+        COBEX_PLANKS = addBlock("cobex_planks", new Block(FabricBlockSettings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD)));
+        COBEX_LEAVES = addBlock("cobex_leaves", createLeavesBlock());
+        COBEX_SAPLING = addBlock("cobex_sapling", new CMSaplingBlock(new CobexSaplingGenerator(), FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+        BLUE_GRASS = addBlock("blue_grass", new CMFernBlock(FabricBlockSettings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+        CLEMATIS_FLOWER = addBlock("clematis_flower", new CMFernBlock(FabricBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+        BELL_FLOWER = addBlock("bell_flower", new CMFernBlock(FabricBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+        GLOW_FLOWER = addBlock("glow_flower", new CMFernBlock(FabricBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque().luminance(10)));
+        RED_CABBAGE_CROP = addBlock("red_cabbage_crop", new RedCabbageBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)), false, true);
+        FARMLAND = addBlock("farmland", new CMFarmlandBlock(FabricBlockSettings.of(Material.SOIL).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRAVEL).blockVision(CMBlocks::always).suffocates(CMBlocks::always)));
+        COBEX_TORCH = addBlock("cobex_torch", new TorchBlock(FabricBlockSettings.of(Material.DECORATION).noCollision().breakInstantly().luminance(14).sounds(BlockSoundGroup.WOOD), ParticleTypes.FLAME), false, false);
+        COBEX_WALL_TORCH = addBlock("cobex_wall_torch", new WallTorchBlock(FabricBlockSettings.of(Material.DECORATION).noCollision().breakInstantly().luminance(14).sounds(BlockSoundGroup.WOOD).dropsLike(COBEX_TORCH), ParticleTypes.FLAME), false, false);
+        COBEX_STAIR = addBlock("cobex_stairs", new StairsBlock(COBEX_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(COBEX_PLANKS)));
+        COBEX_SLAB = addBlock("cobex_slab", new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)));
     }
 
     private static <T extends Block> T addBlock(String name, T block) {
-        return addBlock(name, block, true);
+        return addBlock(name, block, true, true);
     }
 
-    private static <T extends Block> T addBlock(String name, T block, boolean addToCreative) {
+    private static <T extends Block> T addBlock(String name, T block, boolean addToItemGroup, boolean registerBlockItem) {
         Registry.register(Registry.BLOCK, new Identifier(CobaltMod.MOD_ID, name), block);
 
         FabricItemSettings itemSettings = new FabricItemSettings();
-        if(addToCreative) {
-            itemSettings.group(CMContent.BLOCK_GROUP);
+        if (addToItemGroup) {
+            itemSettings.group(CobaltMod.BLOCK_GROUP);
         }
-        Registry.register(Registry.ITEM, new Identifier(CobaltMod.MOD_ID, name), new BlockItem(block, itemSettings));
+        if (registerBlockItem) {
+            Registry.register(Registry.ITEM, new Identifier(CobaltMod.MOD_ID, name), new BlockItem(block, itemSettings));
+        }
         return block;
     }
 

@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "mod_cobalt:blocks/corrupted_stone"
+        "all": "mod_cobalt:block/corrupted_stone"
     }
 }

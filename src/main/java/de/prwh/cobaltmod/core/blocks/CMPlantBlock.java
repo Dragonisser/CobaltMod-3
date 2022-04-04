@@ -1,6 +1,5 @@
 package de.prwh.cobaltmod.core.blocks;
 
-import de.prwh.cobaltmod.core.api.CMContent;
 import de.prwh.cobaltmod.core.tag.CMBlockTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.PlantBlock;

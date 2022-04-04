@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "mod_cobalt:blocks/cobex_torch_on"
+        "layer0": "mod_cobalt:block/cobex_torch"
     }
 }

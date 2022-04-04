@@ -1,6 +1,5 @@
 package de.prwh.cobaltmod.core.blocks;
 
-import de.prwh.cobaltmod.core.api.CMContent;
 import de.prwh.cobaltmod.core.tag.CMBlockTags;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
@@ -25,7 +24,7 @@ public class CMFarmlandBlock extends FarmlandBlock {
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return !this.getDefaultState().canPlaceAt(ctx.getWorld(), ctx.getBlockPos()) ? CMContent.COBALT_DIRT.getDefaultState() : super.getPlacementState(ctx);
+        return !this.getDefaultState().canPlaceAt(ctx.getWorld(), ctx.getBlockPos()) ? CMBlocks.COBALT_DIRT.getDefaultState() : super.getPlacementState(ctx);
     }
 
     @Override
@@ -61,7 +60,7 @@ public class CMFarmlandBlock extends FarmlandBlock {
     }
 
     public static void setToDirt(BlockState state, World world, BlockPos pos) {
-        world.setBlockState(pos, pushEntitiesUpBeforeBlockChange(state, CMContent.COBALT_DIRT.getDefaultState(), world, pos));
+        world.setBlockState(pos, pushEntitiesUpBeforeBlockChange(state, CMBlocks.COBALT_DIRT.getDefaultState(), world, pos));
     }
 
     private static boolean hasCrop(BlockView world, BlockPos pos) {

@@ -1,10 +1,10 @@
 {
     "parent": "block/grass_block",
     "textures": {
-        "particle": "mod_cobalt:blocks/cobalt_dirt",
-        "bottom": "mod_cobalt:blocks/cobalt_dirt",
-        "top": "mod_cobalt:blocks/cobalt_grass_block_top",
-        "side": "mod_cobalt:blocks/cobalt_grass_block",
-        "overlay": "mod_cobalt:blocks/cobalt_grass_block"
+        "particle": "mod_cobalt:block/cobalt_dirt",
+        "bottom": "mod_cobalt:block/cobalt_dirt",
+        "top": "mod_cobalt:block/cobalt_grass_block_top",
+        "side": "mod_cobalt:block/cobalt_grass_block",
+        "overlay": "mod_cobalt:block/cobalt_grass_block"
     }
 }

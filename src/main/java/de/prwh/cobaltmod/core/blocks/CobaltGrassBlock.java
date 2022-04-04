@@ -1,22 +1,15 @@
 package de.prwh.cobaltmod.core.blocks;
 
 import de.prwh.cobaltmod.core.CobaltMod;
-import de.prwh.cobaltmod.core.api.CMContent;
-import de.prwh.cobaltmod.core.api.CMReplace;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.PillarBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.state.property.EnumProperty;
-import net.minecraft.state.property.Properties;
-import net.minecraft.state.property.Property;
-import net.minecraft.tag.FluidTags;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -24,7 +17,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.chunk.light.ChunkLightProvider;
 
-import java.util.Objects;
 import java.util.Random;
 
 public class CobaltGrassBlock extends Block {
@@ -50,7 +42,7 @@ public class CobaltGrassBlock extends Block {
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (!canSurvive(state, world, pos)) {
-            world.setBlockState(pos, CMContent.COBALT_DIRT.getDefaultState());
+            world.setBlockState(pos, CMBlocks.COBALT_DIRT.getDefaultState());
         } else {
             if (world.getLightLevel(pos.up()) >= 9) {
                 for (int i = 0; i < 4; ++i) {
@@ -66,7 +58,7 @@ public class CobaltGrassBlock extends Block {
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         super.randomDisplayTick(state, world, pos, random);
         if (random.nextInt(10) == 0) {
-            world.addParticle(CMContent.COBALT_AURA, (double) pos.getX() + random.nextDouble(), (double) pos.getY() + 1.1D, (double) pos.getZ() + random.nextDouble(), 0.0D, 0.0D, 0.0D);
+            world.addParticle(CobaltMod.COBALT_AURA, (double) pos.getX() + random.nextDouble(), (double) pos.getY() + 1.1D, (double) pos.getZ() + random.nextDouble(), 0.0D, 0.0D, 0.0D);
         }
     }
 

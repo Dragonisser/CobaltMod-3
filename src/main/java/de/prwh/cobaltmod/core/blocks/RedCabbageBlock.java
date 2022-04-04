@@ -1,6 +1,6 @@
 package de.prwh.cobaltmod.core.blocks;
 
-import de.prwh.cobaltmod.core.api.CMContent;
+import de.prwh.cobaltmod.core.items.CMItems;
 import net.minecraft.item.ItemConvertible;
 
 public class RedCabbageBlock extends CMCropBlock {
@@ -9,6 +9,6 @@ public class RedCabbageBlock extends CMCropBlock {
     }
 
     protected ItemConvertible getSeedsItem() {
-        return CMContent.RED_CABBAGE_SEEDS;
+        return CMItems.RED_CABBAGE_SEEDS;
     }
 }

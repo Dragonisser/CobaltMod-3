@@ -1,6 +1,6 @@
 {
     "parent": "block/cross",
     "textures": {
-        "cross": "mod_cobalt:blocks/glow_flower"
+        "cross": "mod_cobalt:block/glow_flower"
     }
 }
