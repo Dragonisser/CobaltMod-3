@@ -58,7 +58,7 @@ public class CobaltMod implements ModInitializer {
         CMBlocks.init();
         CMItems.init();
 
-        COBEX = ConfiguredFeatures.register("cobex", Feature.TREE, (builder(CMBlocks.COBEX_LOG, CMBlocks.COBEX_LEAVES, 4, 2, 0, 2)).ignoreVines().build());
+        COBEX = ConfiguredFeatures.register("cobex", Feature.TREE, (builder(CMBlocks.COBEX_LOG, CMBlocks.COBEX_LEAVES, 4, 2, 0, 2)).dirtProvider(BlockStateProvider.of(CMBlocks.COBALT_DIRT)).ignoreVines().build());
 
 
         CMReplace.addBlocks(CMBlocks.COBALT_DIRT, CMBlocks.COBALT_GRASS_BLOCK);
