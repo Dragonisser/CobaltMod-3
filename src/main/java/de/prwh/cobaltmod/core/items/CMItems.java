@@ -3,7 +3,6 @@ package de.prwh.cobaltmod.core.items;
 import de.prwh.cobaltmod.core.CobaltMod;
 import de.prwh.cobaltmod.core.blocks.CMBlocks;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -48,9 +47,9 @@ public class CMItems {
     public static Item BLUE_BERRY;
     public static Item COBALT_FERTILIZER;
     public static Item FIRE_SHARD;
-    public static Item COBEX_DOOR_I;
-    public static Item COBALT_DOOR_I;
-    public static Item COBALT_BED_I;
+    public static Item COBEX_DOOR;
+    public static Item COBALT_DOOR;
+    public static Item COBALT_BED;
     public static Item STONE_FRAGMENT;
     public static Item STONE_CRYSTAL;
     public static Item BUCKET_DARK_WATER;
@@ -68,7 +67,7 @@ public class CMItems {
     public static Item BLUE_WOOL;
     public static Item SPEED_COBALT_BOOTS;
     public static Item CHEST_KEY;
-    public static Item WATER_THORN_I;
+    public static Item WATER_THORN;
 
     private CMItems() {}
 

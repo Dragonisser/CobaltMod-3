@@ -27,8 +27,7 @@ public class CMBlocks {
     public static Block COBEX_LEAVES;
     public static Block COBEX_SAPLING;
     public static Block BLUE_GRASS;
-    //	public static BlockSlab COBALT_HALF_SLAB;
-//	public static BlockSlab COBALT_DOUBLE_SLAB;
+    //	public static BlockSlab COBALT_SLAB;
     public static Block CLEMATIS_FLOWER;
     public static Block RED_CABBAGE_CROP;
     public static Block COBALT_BRICK;
@@ -48,8 +47,8 @@ public class CMBlocks {
     public static Block BLUE_FIRE;
     public static Block BELL_FLOWER;
     public static Block BOUNCY_COBALT;
-    public static Block COBALT_FURNACE_IDLE;
-    public static Block COBALT_FURNACE_BURNING;
+    public static Block CORRUPTED_STONE_FURNACE_BURNING;
+    public static Block CORRUPTED_STONE_FURNACE_IDLE;
     public static Block COBEX_CHEST;
     public static Block COBEX_DOOR;
     public static Block COBALT_DOOR;
@@ -63,8 +62,7 @@ public class CMBlocks {
     public static Block CARTHUN_BRICK;
     public static Block CARTHUN_BRICK_STAIR;
 
-//	public static BlockSlab CARTHUN_BRICK_SINGLE_SLAB;
-//	public static BlockSlab CARTHUN_BRICK_DOUBLE_SLAB;
+//	public static BlockSlab CARTHUN_BRICK_SLAB;
 
     public static Block GLOW_FLOWER;
     public static Block BLUE_VINE;
@@ -75,8 +73,6 @@ public class CMBlocks {
     public static Block PODIUM;
     public static Block BIG_COBEX_SAPLING;
     public static Block BIG_COBEX_LEAVES;
-    public static Block CORRUPTED_STONE_FURNACE_BURNING;
-    public static Block CORRUPTED_STONE_FURNACE_IDLE;
     public static Block LOCKED_COBALT_CHEST;
     public static Block COBALT_CHEST;
 
