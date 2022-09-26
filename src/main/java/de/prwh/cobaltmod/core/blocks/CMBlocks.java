@@ -109,7 +109,6 @@ public class CMBlocks {
         COBEX_WALL_TORCH = addBlock("cobex_wall_torch", new WallTorchBlock(FabricBlockSettings.of(Material.DECORATION).noCollision().breakInstantly().luminance(14).sounds(BlockSoundGroup.WOOD).dropsLike(COBEX_TORCH), ParticleTypes.FLAME), false, false);
         COBEX_STAIR = addBlock("cobex_stairs", new StairsBlock(COBEX_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(COBEX_PLANKS)));
         COBEX_SLAB = addBlock("cobex_slab", new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)));
-
         COBALT_BRICK = addBlock("cobalt_brick", new Block(FabricBlockSettings.of(Material.STONE).strength(2.0F).sounds(BlockSoundGroup.STONE)));
         COBALT_BRICK_STAIR = addBlock("cobalt_brick_stairs", new StairsBlock(COBALT_BRICK.getDefaultState(), AbstractBlock.Settings.copy(COBALT_BRICK)));
         COBALT_BRICK_SLAB = addBlock("cobalt_brick_slab", new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(2.0F, 3.0F).sounds(BlockSoundGroup.STONE)));
