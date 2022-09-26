@@ -20,7 +20,7 @@
     "entered_cobaldis": {
       "trigger": "minecraft:changed_dimension",
       "conditions": {
-        "to": "mod_cobalt:cobaldis"
+        "to": "minecraft:the_nether"
       }
     }
   },

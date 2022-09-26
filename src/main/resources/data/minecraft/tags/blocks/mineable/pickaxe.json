@@ -3,6 +3,9 @@
   "values": [
     "mod_cobalt:cobalt_ore",
     "mod_cobalt:cobalt_block",
-    "mod_cobalt:corrupted_stone"
+    "mod_cobalt:corrupted_stone",
+    "mod_cobalt:cobalt_brick",
+    "mod_cobalt:cobalt_brick_stairs",
+    "mod_cobalt:cobalt_brick_slab"
   ]
 }
