@@ -112,6 +112,9 @@ public class CMBlocks {
         COBALT_BRICK = addBlock("cobalt_brick", new Block(FabricBlockSettings.of(Material.STONE).strength(2.0F).sounds(BlockSoundGroup.STONE)));
         COBALT_BRICK_STAIR = addBlock("cobalt_brick_stairs", new StairsBlock(COBALT_BRICK.getDefaultState(), AbstractBlock.Settings.copy(COBALT_BRICK)));
         COBALT_BRICK_SLAB = addBlock("cobalt_brick_slab", new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(2.0F, 3.0F).sounds(BlockSoundGroup.STONE)));
+        PORTAL_FRAME = addBlock("portal_frame", new Block(FabricBlockSettings.of(Material.STONE).strength(-1.0F, 3600000.0F).dropsNothing()));
+
+
     }
 
     private static <T extends Block> T addBlock(String name, T block) {

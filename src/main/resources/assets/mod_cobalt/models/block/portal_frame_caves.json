@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "mod_cobalt:blocks/portal_frame_caves"
+        "all": "mod_cobalt:block/portal_frame_caves"
     }
 }

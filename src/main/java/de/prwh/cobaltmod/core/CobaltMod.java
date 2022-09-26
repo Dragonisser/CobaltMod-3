@@ -6,10 +6,12 @@ import de.prwh.cobaltmod.core.items.CMItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
+import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
@@ -60,6 +62,13 @@ public class CobaltMod implements ModInitializer {
 
         COBEX = ConfiguredFeatures.register("cobex", Feature.TREE, (builder(CMBlocks.COBEX_LOG, CMBlocks.COBEX_LEAVES, 4, 2, 0, 2)).dirtProvider(BlockStateProvider.of(CMBlocks.COBALT_DIRT)).ignoreVines().build());
 
+        //TODO Change lighting item
+        CustomPortalBuilder.beginPortal()
+                .frameBlock(CMBlocks.PORTAL_FRAME)
+                .lightWithItem(Items.ENDER_EYE)
+                .destDimID(new Identifier(MOD_ID ,"cobaldis"))
+                .tintColor(35,41,55)
+                .registerPortal();
 
         CMReplace.addBlocks(CMBlocks.COBALT_DIRT, CMBlocks.COBALT_GRASS_BLOCK);
         CMReplace.addBlocks(Blocks.DIRT, CMBlocks.COBALT_GRASS_BLOCK);
