@@ -81,6 +81,7 @@ public class CMItems {
         COOKED_RED_CABBAGE = addItem("cooked_red_cabbage", new Item(giveDefaultFIS().food(FoodComponents.BEETROOT_SOUP)));
         RED_CABBAGE_SEEDS = addItem("red_cabbage_seeds", new AliasedBlockItem(CMBlocks.RED_CABBAGE_CROP, giveDefaultFIS()));
         COBEX_TORCH = addItem("cobex_torch", new WallStandingBlockItem(CMBlocks.COBEX_TORCH, CMBlocks.COBEX_WALL_TORCH, giveDefaultFIS()));
+        FIRE_SHARD = addItem("fire_shard", new Item(giveDefaultFIS()));
     }
 
     private static <T extends Item> T addItem(String name, T item) {

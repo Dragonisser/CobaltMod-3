@@ -65,9 +65,10 @@ public class CobaltMod implements ModInitializer {
         //TODO Change lighting item
         CustomPortalBuilder.beginPortal()
                 .frameBlock(CMBlocks.PORTAL_FRAME)
-                .lightWithItem(Items.ENDER_EYE)
+                .lightWithItem(CMItems.FIRE_SHARD)
                 .destDimID(new Identifier(MOD_ID ,"cobaldis"))
-                .tintColor(35,41,55)
+                .tintColor(7,37,94)
+                .onlyLightInOverworld()
                 .registerPortal();
 
         CMReplace.addBlocks(CMBlocks.COBALT_DIRT, CMBlocks.COBALT_GRASS_BLOCK);

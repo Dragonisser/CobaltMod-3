@@ -1,0 +1,12 @@
+{
+  "config": {
+    "features": [
+      {
+        "feature": "mod_cobalt:fancy_cobex",
+        "chance": 0.33333334
+      }
+    ],
+    "default": "mod_cobalt:cobex"
+  },
+  "type": "minecraft:random_selector"
+}
