@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "mod_cobalt:blocks/big_cobex_leaves"
+        "all": "mod_cobalt:block/tall_cobex_leaves"
     }
 }

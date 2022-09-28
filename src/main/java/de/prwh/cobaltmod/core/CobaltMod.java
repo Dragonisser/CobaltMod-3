@@ -42,6 +42,7 @@ public class CobaltMod implements ModInitializer {
 
     //Trees
     public static RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> COBEX;
+    public static RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> TALL_COBEX;
 
     @Override
     public void onInitialize() {
@@ -61,6 +62,8 @@ public class CobaltMod implements ModInitializer {
         CMItems.init();
 
         COBEX = ConfiguredFeatures.register("cobex", Feature.TREE, (builder(CMBlocks.COBEX_LOG, CMBlocks.COBEX_LEAVES, 4, 2, 0, 2)).dirtProvider(BlockStateProvider.of(CMBlocks.COBALT_DIRT)).ignoreVines().build());
+        TALL_COBEX = ConfiguredFeatures.register("tall_cobex", Feature.TREE, (builder(CMBlocks.COBEX_LOG, CMBlocks.TALL_COBEX_LEAVES, 8, 2, 0, 2)).dirtProvider(BlockStateProvider.of(CMBlocks.COBALT_DIRT)).ignoreVines().build());
+
 
         //TODO Change lighting item
         CustomPortalBuilder.beginPortal()

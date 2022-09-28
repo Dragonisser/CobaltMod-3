@@ -28,7 +28,10 @@
     [],
     [],
     [],
-    [],
+    [
+      "mod_cobalt:patch_grass_forest",
+      "mod_cobalt:trees_tall_cobex_forest"
+    ],
     []
   ],
   "spawners": {
@@ -43,7 +46,7 @@
   },
   "spawn_costs": {},
   "precipitation": "rain",
-  "temperature": 0.8,
+  "temperature": 1.0,
   "downfall": 0.4,
   "category": "forest"
 }

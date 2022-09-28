@@ -1,0 +1,17 @@
+{
+  "feature": "mod_cobalt:tall_cobex",
+  "placement": [
+    {
+      "predicate": {
+        "state": {
+          "Properties": {
+            "stage": "0"
+          },
+          "Name": "mod_cobalt:tall_cobex_sapling"
+        },
+        "type": "minecraft:would_survive"
+      },
+      "type": "minecraft:block_predicate_filter"
+    }
+  ]
+}

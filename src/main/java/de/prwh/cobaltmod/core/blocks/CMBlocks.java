@@ -2,6 +2,7 @@ package de.prwh.cobaltmod.core.blocks;
 
 import de.prwh.cobaltmod.core.CobaltMod;
 import de.prwh.cobaltmod.core.blocks.sapling.CobexSaplingGenerator;
+import de.prwh.cobaltmod.core.blocks.sapling.TallCobexSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -72,8 +73,8 @@ public class CMBlocks {
     public static Block COBALT_DIRT;
     public static Block FARMLAND;
     public static Block PODIUM;
-    public static Block BIG_COBEX_SAPLING;
-    public static Block BIG_COBEX_LEAVES;
+    public static Block TALL_COBEX_SAPLING;
+    public static Block TALL_COBEX_LEAVES;
     public static Block LOCKED_COBALT_CHEST;
     public static Block COBALT_CHEST;
 
@@ -92,7 +93,7 @@ public class CMBlocks {
     public static void init() {
         COBALT_ORE = addBlock("cobalt_ore", new OreBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)));
         CORRUPTED_STONE = addBlock("corrupted_stone", new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F)));
-        COBALT_GRASS_BLOCK = addBlock("cobalt_grass_block", new CobaltGrassBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRASS)));
+        COBALT_GRASS_BLOCK = addBlock("cobalt_grass_block", new CobaltGrassBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRASS)));
         COBALT_DIRT = addBlock("cobalt_dirt", new Block(FabricBlockSettings.of(Material.SOIL).strength(0.5F).sounds(BlockSoundGroup.GRAVEL)));
         COBALT_BLOCK = addBlock("cobalt_block", new Block(FabricBlockSettings.of(Material.METAL).requiresTool().strength(5.0F, 6.0F).sounds(BlockSoundGroup.METAL)));
         COBEX_LOG = addBlock("cobex_log", new PillarBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD)));
@@ -113,8 +114,10 @@ public class CMBlocks {
         COBALT_BRICK_STAIR = addBlock("cobalt_brick_stairs", new StairsBlock(COBALT_BRICK.getDefaultState(), AbstractBlock.Settings.copy(COBALT_BRICK)));
         COBALT_BRICK_SLAB = addBlock("cobalt_brick_slab", new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(2.0F, 3.0F).sounds(BlockSoundGroup.STONE)));
         PORTAL_FRAME = addBlock("portal_frame", new Block(FabricBlockSettings.of(Material.STONE).strength(-1.0F, 3600000.0F).dropsNothing()));
+        HARDENED_CORRUPTED_STONE = addBlock("hardened_corrupted_stone", new Block(AbstractBlock.Settings.copy(CORRUPTED_STONE)));
 
-
+        TALL_COBEX_SAPLING = addBlock("tall_cobex_sapling", new CMSaplingBlock(new TallCobexSaplingGenerator(), FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+        TALL_COBEX_LEAVES = addBlock("tall_cobex_leaves", createLeavesBlock());
     }
 
     private static <T extends Block> T addBlock(String name, T block) {

@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cross",
+    "textures": {
+        "cross": "mod_cobalt:block/tall_cobex_sapling"
+    }
+}

@@ -6,35 +6,8 @@
         {
           "parameters": {
             "erosion": [
-              0.35,
-              0.55
-            ],
-            "depth": 0.0,
-            "weirdness": [
-              -0.9333,
-              -0.7666
-            ],
-            "offset": 0.0,
-            "temperature": [
-              0.2,
-              0.55
-            ],
-            "humidity": [
-              -0.1,
-              0.1
-            ],
-            "continentalness": [
-              0.7,
-              1.0
-            ]
-          },
-          "biome": "mod_cobalt:cobex_forest"
-        },
-        {
-          "parameters": {
-            "erosion": [
-              -0.2,
-              0.0
+              0.95,
+              1.20
             ],
             "depth": 0.0,
             "weirdness": [
@@ -43,43 +16,16 @@
             ],
             "offset": 0.0,
             "temperature": [
-              -0.15,
-              0.2
-            ],
-            "humidity": [
-              -0.35,
-              -0.1
-            ],
-            "continentalness": [
-              0.7,
-              1.2
-            ]
-          },
-          "biome": "mod_cobalt:blue_hills"
-        },
-        {
-          "parameters": {
-            "erosion": [
-              0.55,
-              0.75
-            ],
-            "depth": 0.0,
-            "weirdness": [
-              -1.0,
-              -0.9333
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -0.45,
-              -0.15
+              0.0,
+              0.0
             ],
             "humidity": [
               -0.1,
               0.1
             ],
             "continentalness": [
-              -0.11,
-              0.0
+              1.5,
+              2.0
             ]
           },
           "biome": "mod_cobalt:deep_swamp"
@@ -87,8 +33,8 @@
         {
           "parameters": {
             "erosion": [
-              -1.0,
-              -0.2
+              0.65,
+              0.95
             ],
             "depth": 0.0,
             "weirdness": [
@@ -97,46 +43,127 @@
             ],
             "offset": 0.0,
             "temperature": [
-              -0.15,
-              0.2
-            ],
-            "humidity": [
-              -0.35,
-              -0.1
-            ],
-            "continentalness": [
-              1.2,
-              1.7
-            ]
-          },
-          "biome": "mod_cobalt:higherlands"
-        },
-        {
-          "parameters": {
-            "erosion": [
-              0.10,
-              0.375
-            ],
-            "depth": 0.0,
-            "weirdness": [
-              -0.9333,
-              -0.7666
-            ],
-            "offset": 0.0,
-            "temperature": [
-              0.2,
-              0.55
+              0.0,
+              0.0
             ],
             "humidity": [
               -0.1,
               0.1
             ],
             "continentalness": [
-              0.7,
-              1.0
+              1.5,
+              2.0
+            ]
+          },
+          "biome": "mod_cobalt:flower_plains"
+        },
+        {
+          "parameters": {
+            "erosion": [
+              0.35,
+              0.65
+            ],
+            "depth": 0.0,
+            "weirdness": [
+              -0.4,
+              -0.2666
+            ],
+            "offset": 0.0,
+            "temperature": [
+              0.0,
+              0.0
+            ],
+            "humidity": [
+              -0.1,
+              0.1
+            ],
+            "continentalness": [
+              1.5,
+              2.0
+            ]
+          },
+          "biome": "mod_cobalt:cobex_forest"
+        },
+        {
+          "parameters": {
+            "erosion": [
+              -0.1,
+              0.65
+            ],
+            "depth": 0.0,
+            "weirdness": [
+              -0.4,
+              -0.2666
+            ],
+            "offset": 0.0,
+            "temperature": [
+              0.0,
+              0.0
+            ],
+            "humidity": [
+              -0.1,
+              0.1
+            ],
+            "continentalness": [
+              1.5,
+              2.0
             ]
           },
           "biome": "mod_cobalt:tall_forest"
+        },
+        {
+          "parameters": {
+            "erosion": [
+              -0.7,
+              -0.1
+            ],
+            "depth": 0.0,
+            "weirdness": [
+              -0.4,
+              -0.2666
+            ],
+            "offset": 0.0,
+            "temperature": [
+              0.0,
+              0.0
+            ],
+            "humidity": [
+              -0.1,
+              0.1
+            ],
+            "continentalness": [
+              1.5,
+              2.0
+            ]
+          },
+          "biome": "mod_cobalt:blue_hills"
+        },
+        {
+          "parameters": {
+            "erosion": [
+              -1.2,
+              -0.7
+            ],
+            "depth": 0.0,
+            "weirdness": [
+              -0.4,
+              -0.2666
+            ],
+            "offset": 0.0,
+            "temperature": [
+              0.0,
+              0.0
+            ],
+            "humidity": [
+              -0.1,
+              0.1
+            ],
+            "continentalness": [
+              1.5,
+              2.0
+            ]
+          },
+          "biome": "mod_cobalt:higherlands"
         }
       ],
       "type": "minecraft:multi_noise"

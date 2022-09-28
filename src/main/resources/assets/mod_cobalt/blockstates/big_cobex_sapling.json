@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "stage=0": { "model": "mod_cobalt:block/big_cobex_sapling" },
-        "stage=1": { "model": "mod_cobalt:block/big_cobex_sapling" }
-    }
-}

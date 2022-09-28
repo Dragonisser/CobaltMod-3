@@ -29,7 +29,8 @@
     [],
     [],
     [
-      "mod_cobalt:cobex"
+      "mod_cobalt:trees_cobex_forest",
+      "mod_cobalt:patch_grass_normal"
     ],
     []
   ],
@@ -47,5 +48,5 @@
   "precipitation": "rain",
   "temperature": 0.8,
   "downfall": 0.4,
-  "category": "forest"
+  "category": "mountain"
 }

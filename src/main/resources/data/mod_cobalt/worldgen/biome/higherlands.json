@@ -28,7 +28,9 @@
     [],
     [],
     [],
-    [],
+    [
+      "mod_cobalt:patch_grass_normal"
+    ],
     []
   ],
   "spawners": {
@@ -43,7 +45,7 @@
   },
   "spawn_costs": {},
   "precipitation": "rain",
-  "temperature": 0.8,
+  "temperature": 0.6,
   "downfall": 0.4,
   "category": "extreme_hills"
 }
