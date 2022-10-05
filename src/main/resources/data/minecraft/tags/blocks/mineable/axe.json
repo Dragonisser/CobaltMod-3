@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mod_cobalt:cobex_log",
+    "mod_cobalt:cobex_planks",
+    "mod_cobalt:cobex_stairs",
+    "mod_cobalt:cobex_slab"
+  ]
+}

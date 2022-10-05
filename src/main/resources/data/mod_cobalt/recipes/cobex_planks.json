@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "mod_cobalt:cobex_logs"
+    }
+  ],
+  "result": {
+    "item": "mod_cobalt:cobex_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "mod_cobalt:cobalt_grass_block"
+    },
+    "title": {
+      "translate": "advancements.mod_cobalt.story.root.title"
+    },
+    "description": {
+      "translate": "advancements.mod_cobalt.story.root.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "step_on_block": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "step_on_block"
+    ]
+  ]
+}

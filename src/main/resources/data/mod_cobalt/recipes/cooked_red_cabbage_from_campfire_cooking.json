@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "mod_cobalt:red_cabbage"
+  },
+  "result": "mod_cobalt:cooked_red_cabbage",
+  "experience": 0.35,
+  "cookingtime": 600
+}

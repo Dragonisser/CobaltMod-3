@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "mod_cobalt:blocks/cobalt_block"
+        "all": "mod_cobalt:block/cobalt_block"
     }
 }

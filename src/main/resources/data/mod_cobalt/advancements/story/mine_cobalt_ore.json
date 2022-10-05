@@ -1,0 +1,37 @@
+{
+  "parent": "mod_cobalt:story/travel_to_cobaldis",
+  "display": {
+    "icon": {
+      "item": "mod_cobalt:cobalt_ore"
+    },
+    "title": {
+      "translate": "advancements.mod_cobalt.story.mine_cobalt_ore.title"
+    },
+    "description": {
+      "translate": "advancements.mod_cobalt.story.mine_cobalt_ore.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_cobalt_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mod_cobalt:cobalt_ore"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_cobalt_ore"
+    ]
+  ]
+}

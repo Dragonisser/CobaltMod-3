@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "mod_cobalt:cobex_deadbush" }
+        "": { "model": "mod_cobalt:block/cobex_dead_bush" }
     }
 }

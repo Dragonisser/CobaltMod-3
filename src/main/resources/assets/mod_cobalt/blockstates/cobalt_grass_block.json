@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "mod_cobalt:block/cobalt_grass_block" }
+    }
+}

@@ -1,0 +1,37 @@
+{
+  "parent": "mod_cobalt:story/travel_to_cobaldis",
+  "display": {
+    "icon": {
+      "item": "mod_cobalt:red_cabbage"
+    },
+    "title": {
+      "translate": "advancements.mod_cobalt.story.pickup_red_cabbage.title"
+    },
+    "description": {
+      "translate": "advancements.mod_cobalt.story.pickup_red_cabbage.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_red_cabbage": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mod_cobalt:red_cabbage"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_red_cabbage"
+    ]
+  ]
+}

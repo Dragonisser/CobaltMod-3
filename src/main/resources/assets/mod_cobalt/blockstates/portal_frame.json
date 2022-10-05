@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "mod_cobalt:portal_frame" }
+        "": { "model": "mod_cobalt:block/portal_frame" }
     }
 }

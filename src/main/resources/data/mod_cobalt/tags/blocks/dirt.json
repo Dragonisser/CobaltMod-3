@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "mod_cobalt:cobalt_dirt",
+    "mod_cobalt:cobalt_grass_block"
+  ]
+}
