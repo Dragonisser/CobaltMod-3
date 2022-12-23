@@ -42,8 +42,8 @@ public class CMItems {
     public static Item NJOSS_CRYSTAL;
     public static Item COBALT_STONE_FRAGMENT;
     public static Item COBALT_STONE_CRYSTAL;
-    public static Item BLUE_ESSENCE;
-    public static Item GREEN_ESSENCE;
+    public static Item COBALDIS_ESSENCE;
+    public static Item OVERWORLD_ESSENCE;
     public static Item BLUE_BERRY;
     public static Item COBALT_FERTILIZER;
     public static Item FIRE_SHARD;
@@ -82,6 +82,13 @@ public class CMItems {
         RED_CABBAGE_SEEDS = addItem("red_cabbage_seeds", new AliasedBlockItem(CMBlocks.RED_CABBAGE_CROP, giveDefaultFIS()));
         COBEX_TORCH = addItem("cobex_torch", new WallStandingBlockItem(CMBlocks.COBEX_TORCH, CMBlocks.COBEX_WALL_TORCH, giveDefaultFIS()));
         FIRE_SHARD = addItem("fire_shard", new Item(giveDefaultFIS()));
+        //TODO create FoodComponent
+        BLUE_BERRY = addItem("blue_berry", new Item(giveDefaultFIS().food(FoodComponents.CARROT)));
+        OVERWORLD_ESSENCE = addItem("overworld_essence", new Item(giveDefaultFIS()));
+        COBALDIS_ESSENCE = addItem("cobaldis_essence", new Item(giveDefaultFIS()));
+        STONE_CRYSTAL = addItem("stone_crystal", new Item(giveDefaultFIS()));
+        STONE_FRAGMENT = addItem("stone_fragment", new Item(giveDefaultFIS()));
+
     }
 
     private static <T extends Item> T addItem(String name, T item) {
