@@ -48,13 +48,14 @@ public class CMLeavesBlock extends LeavesBlock {
     }
 
     @Override
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        int i = getDistanceFromLog(neighborState) + 1;
-        if (i != 1 || (Integer) state.get(DISTANCE) != i) {
-            world.createAndScheduleBlockTick(pos, this, 1);
-        }
-        return state;
-    }
+	public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+		int i = getDistanceFromLog(neighborState) + 1;
+		if (i != 1 || (Integer)state.get(DISTANCE) != i) {
+			world.scheduleBlockTick(pos, this, 1);
+		}
+
+		return state;
+	}
 
     private static int getDistanceFromLog(BlockState state) {
         if (state.isIn(CMBlockTags.LOGS)) {
