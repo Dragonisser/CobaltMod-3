@@ -2,10 +2,13 @@ package de.prwh.cobaltmod.core.items;
 
 import de.prwh.cobaltmod.core.CobaltMod;
 import de.prwh.cobaltmod.core.blocks.CMBlocks;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.*;
+import net.minecraft.item.AliasedBlockItem;
+import net.minecraft.item.FoodComponents;
+import net.minecraft.item.Item;
+import net.minecraft.item.WallStandingBlockItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 public class CMItems {
 
@@ -95,8 +98,8 @@ public class CMItems {
         return Registry.register(Registry.ITEM, new Identifier(CobaltMod.MOD_ID, name), item);
     }
 
-    private static FabricItemSettings giveDefaultFIS() {
-        return new FabricItemSettings().group(CobaltMod.ITEM_GROUP);
+    private static QuiltItemSettings giveDefaultFIS() {
+        return new QuiltItemSettings().group(CobaltMod.ITEM_GROUP);
     }
 }
 

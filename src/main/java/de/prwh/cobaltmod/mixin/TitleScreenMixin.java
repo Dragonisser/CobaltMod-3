@@ -8,9 +8,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(TitleScreen.class)
-public class CobaltMixin {
-    @Inject(at = @At("HEAD"), method = "init()V")
-    private void init(CallbackInfo info) {
-        CobaltMod.LOGGER.info("This line is printed by an example mod mixin!");
-    }
+public class TitleScreenMixin {
+	@Inject(method = "init", at = @At("TAIL"))
+	public void onInit(CallbackInfo ci) {
+		CobaltMod.LOGGER.info("This line is printed by an example mod mixin!");
+	}
 }
