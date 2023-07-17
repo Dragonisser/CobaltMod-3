@@ -66,8 +66,6 @@ public class CobaltMod implements ModInitializer {
 		COBEX = ConfiguredFeatureUtil.register("cobex", Feature.TREE, (builder(CMBlocks.COBEX_LOG, CMBlocks.COBEX_LEAVES, 4, 2, 0, 2)).dirtProvider(BlockStateProvider.of(CMBlocks.COBALT_DIRT)).ignoreVines().build());
 		TALL_COBEX = ConfiguredFeatureUtil.register("tall_cobex", Feature.TREE, (builder(CMBlocks.COBEX_LOG, CMBlocks.TALL_COBEX_LEAVES, 8, 2, 0, 2)).dirtProvider(BlockStateProvider.of(CMBlocks.COBALT_DIRT)).ignoreVines().build());
 
-
-		//TODO Change lighting item
 		CustomPortalBuilder.beginPortal()
 			.frameBlock(CMBlocks.PORTAL_FRAME)
 			.lightWithItem(CMItems.FIRE_SHARD)

@@ -1,7 +1,7 @@
 {
     "textures": {
-        "particle": "mod_cobalt:blocks/portal_caves",
-        "portal": "mod_cobalt:blocks/portal_caves"
+        "particle": "mod_cobalt:block/portal_caves",
+        "portal": "mod_cobalt:block/portal_caves"
     },
     "elements": [
         {   "from": [ 6, 0, 0 ],

@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "mod_cobalt:blocks/waterthorn",
-        "texture": "mod_cobalt:blocks/waterthorn"
+        "particle": "mod_cobalt:block/waterthorn",
+        "texture": "mod_cobalt:block/waterthorn"
     },
     "elements": [
         {   "from": [ 0, 0.25, 0 ],
