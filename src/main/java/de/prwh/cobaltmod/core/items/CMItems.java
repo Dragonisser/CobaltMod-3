@@ -75,42 +75,42 @@ public class CMItems {
 
     public static void init() {
 
-        COBALT_INGOT = addItem("cobalt_ingot", new Item(giveDefaultFIS()));
-        COBALT_NUGGET = addItem("cobalt_nugget", new Item(giveDefaultFIS()));
-        RAW_COBALT = addItem("raw_cobalt", new Item(giveDefaultFIS()));
-        COBEX_STICK = addItem("cobex_stick", new Item(giveDefaultFIS()));
+        COBALT_INGOT = addItem("cobalt_ingot", new Item(giveDefaultQIS()));
+        COBALT_NUGGET = addItem("cobalt_nugget", new Item(giveDefaultQIS()));
+        RAW_COBALT = addItem("raw_cobalt", new Item(giveDefaultQIS()));
+        COBEX_STICK = addItem("cobex_stick", new Item(giveDefaultQIS()));
         //TODO create FoodComponent
-        RED_CABBAGE = addItem("red_cabbage", new Item(giveDefaultFIS().food(FoodComponents.BEETROOT)));
-        COOKED_RED_CABBAGE = addItem("cooked_red_cabbage", new Item(giveDefaultFIS().food(FoodComponents.BEETROOT_SOUP)));
-        RED_CABBAGE_SEEDS = addItem("red_cabbage_seeds", new AliasedBlockItem(CMBlocks.RED_CABBAGE_CROP, giveDefaultFIS()));
-        COBEX_TORCH = addItem("cobex_torch", new WallStandingBlockItem(CMBlocks.COBEX_TORCH, CMBlocks.COBEX_WALL_TORCH, giveDefaultFIS()));
-        FIRE_SHARD = addItem("fire_shard", new Item(giveDefaultFIS()));
+        RED_CABBAGE = addItem("red_cabbage", new Item(giveDefaultQIS().food(FoodComponents.BEETROOT)));
+        COOKED_RED_CABBAGE = addItem("cooked_red_cabbage", new Item(giveDefaultQIS().food(FoodComponents.BEETROOT_SOUP)));
+        RED_CABBAGE_SEEDS = addItem("red_cabbage_seeds", new AliasedBlockItem(CMBlocks.RED_CABBAGE_CROP, giveDefaultQIS()));
+        COBEX_TORCH = addItem("cobex_torch", new WallStandingBlockItem(CMBlocks.COBEX_TORCH, CMBlocks.COBEX_WALL_TORCH, giveDefaultQIS()));
+        FIRE_SHARD = addItem("fire_shard", new Item(giveDefaultQIS()));
         //TODO create FoodComponent
-        BLUE_BERRY = addItem("blue_berry", new Item(giveDefaultFIS().food(FoodComponents.CARROT)));
-        OVERWORLD_ESSENCE = addItem("overworld_essence", new Item(giveDefaultFIS()));
-        COBALDIS_ESSENCE = addItem("cobaldis_essence", new Item(giveDefaultFIS()));
-        STONE_CRYSTAL = addItem("stone_crystal", new Item(giveDefaultFIS()));
-        STONE_FRAGMENT = addItem("stone_fragment", new Item(giveDefaultFIS()));
+        BLUE_BERRY = addItem("blue_berry", new Item(giveDefaultQIS().food(FoodComponents.CARROT)));
+        OVERWORLD_ESSENCE = addItem("overworld_essence", new Item(giveDefaultQIS()));
+        COBALDIS_ESSENCE = addItem("cobaldis_essence", new Item(giveDefaultQIS()));
+        STONE_CRYSTAL = addItem("stone_crystal", new Item(giveDefaultQIS()));
+        STONE_FRAGMENT = addItem("stone_fragment", new Item(giveDefaultQIS()));
 
 		//TOOLS
-		COBALT_SWORD = addItem("cobalt_sword", new CMSwordItem(CobaltToolMaterial.INSTANCE, 3, -2.4F, giveDefaultFIS()));
-		COBALT_SHOVEL = addItem("cobalt_shovel", new CMShovelItem(CobaltToolMaterial.INSTANCE, 1.5F, -3.0F, giveDefaultFIS()));
-		COBALT_PICKAXE = addItem("cobalt_pickaxe", new CMPickaxeItem(CobaltToolMaterial.INSTANCE, 1, -2.8F, giveDefaultFIS()));
-		COBALT_AXE = addItem("cobalt_axe", new CMAxeItem(CobaltToolMaterial.INSTANCE, 5.0F, -3.0F, giveDefaultFIS()));
-		COBALT_HOE = addItem("cobalt_hoe", new CMHoeItem(CobaltToolMaterial.INSTANCE, -4, 0.0F, giveDefaultFIS()));
+		COBALT_SWORD = addItem("cobalt_sword", new CMSwordItem(CobaltToolMaterial.INSTANCE, 3, -2.4F, giveDefaultQIS()));
+		COBALT_SHOVEL = addItem("cobalt_shovel", new CMShovelItem(CobaltToolMaterial.INSTANCE, 1.5F, -3.0F, giveDefaultQIS()));
+		COBALT_PICKAXE = addItem("cobalt_pickaxe", new CMPickaxeItem(CobaltToolMaterial.INSTANCE, 1, -2.8F, giveDefaultQIS()));
+		COBALT_AXE = addItem("cobalt_axe", new CMAxeItem(CobaltToolMaterial.INSTANCE, 5.0F, -3.0F, giveDefaultQIS()));
+		COBALT_HOE = addItem("cobalt_hoe", new CMHoeItem(CobaltToolMaterial.INSTANCE, -4, 0.0F, giveDefaultQIS()));
 
-		COBEX_SWORD = addItem("cobex_sword", new CMSwordItem(CobexToolMaterial.INSTANCE, 3, -2.4F, giveDefaultFIS()));
-		COBEX_SHOVEL = addItem("cobex_shovel", new CMShovelItem(CobexToolMaterial.INSTANCE, 1.5F, -3.0F, giveDefaultFIS()));
-		COBEX_PICKAXE = addItem("cobex_pickaxe", new CMPickaxeItem(CobexToolMaterial.INSTANCE, 1, -2.8F, giveDefaultFIS()));
-		COBEX_AXE = addItem("cobex_axe", new CMAxeItem(CobexToolMaterial.INSTANCE, 7.0F, -3.2F, giveDefaultFIS()));
-		COBEX_HOE = addItem("cobex_hoe", new CMHoeItem(CobexToolMaterial.INSTANCE, -1, -2.0F, giveDefaultFIS()));
+		COBEX_SWORD = addItem("cobex_sword", new CMSwordItem(CobexToolMaterial.INSTANCE, 3, -2.4F, giveDefaultQIS()));
+		COBEX_SHOVEL = addItem("cobex_shovel", new CMShovelItem(CobexToolMaterial.INSTANCE, 1.5F, -3.0F, giveDefaultQIS()));
+		COBEX_PICKAXE = addItem("cobex_pickaxe", new CMPickaxeItem(CobexToolMaterial.INSTANCE, 1, -2.8F, giveDefaultQIS()));
+		COBEX_AXE = addItem("cobex_axe", new CMAxeItem(CobexToolMaterial.INSTANCE, 7.0F, -3.2F, giveDefaultQIS()));
+		COBEX_HOE = addItem("cobex_hoe", new CMHoeItem(CobexToolMaterial.INSTANCE, -1, -2.0F, giveDefaultQIS()));
     }
 
     private static <T extends Item> T addItem(String name, T item) {
         return Registry.register(Registry.ITEM, new Identifier(CobaltMod.MOD_ID, name), item);
     }
 
-    private static QuiltItemSettings giveDefaultFIS() {
+    private static QuiltItemSettings giveDefaultQIS() {
         return new QuiltItemSettings().group(CobaltMod.ITEM_GROUP);
     }
 }
