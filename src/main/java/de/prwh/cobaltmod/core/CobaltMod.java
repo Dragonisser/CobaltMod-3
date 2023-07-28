@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.FoodComponent;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.DefaultParticleType;
@@ -44,6 +45,11 @@ public class CobaltMod implements ModInitializer {
 	public static Holder<ConfiguredFeature<TreeFeatureConfig, ?>> COBEX;
 	public static Holder<ConfiguredFeature<TreeFeatureConfig, ?>> TALL_COBEX;
 
+	//FoodComponent
+	public static FoodComponent BLUE_BERRY;
+	public static FoodComponent RED_CABBAGE;
+	public static FoodComponent COOKED_RED_CABBAGE;
+
 	@Override
 	public void onInitialize(ModContainer mod) {
 		LOGGER.info("Hello Quilt world from {}!", mod.metadata().name());
@@ -65,6 +71,10 @@ public class CobaltMod implements ModInitializer {
 
 		COBEX = ConfiguredFeatureUtil.register("cobex", Feature.TREE, (builder(CMBlocks.COBEX_LOG, CMBlocks.COBEX_LEAVES, 4, 2, 0, 2)).dirtProvider(BlockStateProvider.of(CMBlocks.COBALT_DIRT)).ignoreVines().build());
 		TALL_COBEX = ConfiguredFeatureUtil.register("tall_cobex", Feature.TREE, (builder(CMBlocks.COBEX_LOG, CMBlocks.TALL_COBEX_LEAVES, 8, 2, 0, 2)).dirtProvider(BlockStateProvider.of(CMBlocks.COBALT_DIRT)).ignoreVines().build());
+
+		BLUE_BERRY = (new FoodComponent.Builder()).hunger(1).saturationModifier(0.6F).build();
+		RED_CABBAGE = (new FoodComponent.Builder()).hunger(2).saturationModifier(0.6F).build();
+		COOKED_RED_CABBAGE = (new FoodComponent.Builder()).hunger(4).saturationModifier(0.6F).build();
 
 		CustomPortalBuilder.beginPortal()
 			.frameBlock(CMBlocks.PORTAL_FRAME)

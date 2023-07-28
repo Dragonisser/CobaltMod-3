@@ -79,14 +79,12 @@ public class CMItems {
         COBALT_NUGGET = addItem("cobalt_nugget", new Item(giveDefaultQIS()));
         RAW_COBALT = addItem("raw_cobalt", new Item(giveDefaultQIS()));
         COBEX_STICK = addItem("cobex_stick", new Item(giveDefaultQIS()));
-        //TODO create FoodComponent
-        RED_CABBAGE = addItem("red_cabbage", new Item(giveDefaultQIS().food(FoodComponents.BEETROOT)));
-        COOKED_RED_CABBAGE = addItem("cooked_red_cabbage", new Item(giveDefaultQIS().food(FoodComponents.BEETROOT_SOUP)));
+        RED_CABBAGE = addItem("red_cabbage", new Item(giveDefaultQIS().food(CobaltMod.RED_CABBAGE)));
+        COOKED_RED_CABBAGE = addItem("cooked_red_cabbage", new Item(giveDefaultQIS().food(CobaltMod.COOKED_RED_CABBAGE)));
         RED_CABBAGE_SEEDS = addItem("red_cabbage_seeds", new AliasedBlockItem(CMBlocks.RED_CABBAGE_CROP, giveDefaultQIS()));
         COBEX_TORCH = addItem("cobex_torch", new WallStandingBlockItem(CMBlocks.COBEX_TORCH, CMBlocks.COBEX_WALL_TORCH, giveDefaultQIS()));
         FIRE_SHARD = addItem("fire_shard", new Item(giveDefaultQIS()));
-        //TODO create FoodComponent
-        BLUE_BERRY = addItem("blue_berry", new Item(giveDefaultQIS().food(FoodComponents.CARROT)));
+        BLUE_BERRY = addItem("blue_berry", new Item(giveDefaultQIS().food(CobaltMod.BLUE_BERRY)));
         OVERWORLD_ESSENCE = addItem("overworld_essence", new Item(giveDefaultQIS()));
         COBALDIS_ESSENCE = addItem("cobaldis_essence", new Item(giveDefaultQIS()));
         STONE_CRYSTAL = addItem("stone_crystal", new Item(giveDefaultQIS()));
