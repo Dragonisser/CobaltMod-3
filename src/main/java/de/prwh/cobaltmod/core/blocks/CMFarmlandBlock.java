@@ -110,7 +110,7 @@ public class CMFarmlandBlock extends FarmlandBlock {
     }
 
     private static boolean isWaterNearby(WorldView world, BlockPos pos) {
-        Iterator var2 = BlockPos.iterate(pos.add(-4, 0, -4), pos.add(4, 1, 4)).iterator();
+        Iterator<BlockPos> var2 = BlockPos.iterate(pos.add(-4, 0, -4), pos.add(4, 1, 4)).iterator();
 
         BlockPos blockPos;
         do {
@@ -118,7 +118,7 @@ public class CMFarmlandBlock extends FarmlandBlock {
                 return false;
             }
 
-            blockPos = (BlockPos)var2.next();
+            blockPos = var2.next();
         } while(!world.getFluidState(blockPos).isIn(FluidTags.WATER));
 
         return true;

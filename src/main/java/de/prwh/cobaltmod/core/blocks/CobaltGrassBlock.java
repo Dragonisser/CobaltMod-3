@@ -44,13 +44,13 @@ public class CobaltGrassBlock extends Block {
         if (!canSurvive(state, world, pos)) {
             world.setBlockState(pos, CMBlocks.COBALT_DIRT.getDefaultState());
         } else {
+            /* TODO check later
             if (world.getLightLevel(pos.up()) >= 9) {
                 for (int i = 0; i < 4; ++i) {
                     BlockPos blockPos = pos.add(random.nextInt(3) - 1, random.nextInt(5) - 3, random.nextInt(3) - 1);
-                    //TODO check later
-                    //CMReplace.replaceBlock(world, blockPos);
+                    CMReplace.replaceBlock(world, blockPos);
                 }
-            }
+            }*/
         }
     }
 
