@@ -1,7 +1,7 @@
 {
     "textures": {
-        "particle": "mod_cobalt:blocks/portal_cobaldis",
-        "portal": "mod_cobalt:blocks/portal_cobaldis"
+        "particle": "mod_cobalt:block/portal_cobaldis",
+        "portal": "mod_cobalt:block/portal_cobaldis"
     },
     "elements": [
         {   "from": [ 0, 0, 6 ],

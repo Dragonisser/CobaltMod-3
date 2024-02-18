@@ -87,11 +87,9 @@ public class CMReplace {
 	private static boolean setBlockState(World world, BlockPos blockPos, BlockState blockStateNew, Block blockOverride) {
 		CobaltMod.LOGGER.info("replacing {} with {}", blockOverride.getTranslationKey(), blockStateNew.getBlock().getTranslationKey());
 		if (CMReplace.getSpread().containsKey(blockOverride)) {
-			if (blockStateNew.getBlock() instanceof CobaltGrassBlock) {
-				if(!canSpread(blockStateNew, world, blockPos)) {
+			if (blockStateNew.getBlock() instanceof CobaltGrassBlock && (!canSpread(blockStateNew, world, blockPos))) {
 					world.setBlockState(blockPos, CMBlocks.COBALT_DIRT.getDefaultState());
 					return false;
-				}
 			}
 			world.setBlockState(blockPos, blockStateNew);
 			return true;

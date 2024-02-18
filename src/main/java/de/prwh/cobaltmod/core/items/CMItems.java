@@ -2,10 +2,9 @@ package de.prwh.cobaltmod.core.items;
 
 import de.prwh.cobaltmod.core.CobaltMod;
 import de.prwh.cobaltmod.core.blocks.CMBlocks;
-import net.minecraft.item.AliasedBlockItem;
-import net.minecraft.item.FoodComponents;
-import net.minecraft.item.Item;
-import net.minecraft.item.WallStandingBlockItem;
+import de.prwh.cobaltmod.core.items.toolmaterial.CobaltToolMaterial;
+import de.prwh.cobaltmod.core.items.toolmaterial.CobexToolMaterial;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
@@ -14,7 +13,7 @@ public class CMItems {
 
     // Items
     public static Item COBALT_PICKAXE;
-    public static Item COBALT_AXE;
+    public static ToolItem COBALT_AXE;
     public static Item COBALT_SHOVEL;
     public static Item COBALT_SWORD;
     public static Item COBALT_HOE;
@@ -75,6 +74,7 @@ public class CMItems {
     private CMItems() {}
 
     public static void init() {
+
         COBALT_INGOT = addItem("cobalt_ingot", new Item(giveDefaultFIS()));
         COBALT_NUGGET = addItem("cobalt_nugget", new Item(giveDefaultFIS()));
         RAW_COBALT = addItem("raw_cobalt", new Item(giveDefaultFIS()));
@@ -92,6 +92,18 @@ public class CMItems {
         STONE_CRYSTAL = addItem("stone_crystal", new Item(giveDefaultFIS()));
         STONE_FRAGMENT = addItem("stone_fragment", new Item(giveDefaultFIS()));
 
+		//TOOLS
+		COBALT_SWORD = addItem("cobalt_sword", new CMSwordItem(CobaltToolMaterial.INSTANCE, 3, -2.4F, giveDefaultFIS()));
+		COBALT_SHOVEL = addItem("cobalt_shovel", new CMShovelItem(CobaltToolMaterial.INSTANCE, 1.5F, -3.0F, giveDefaultFIS()));
+		COBALT_PICKAXE = addItem("cobalt_pickaxe", new CMPickaxeItem(CobaltToolMaterial.INSTANCE, 1, -2.8F, giveDefaultFIS()));
+		COBALT_AXE = addItem("cobalt_axe", new CMAxeItem(CobaltToolMaterial.INSTANCE, 5.0F, -3.0F, giveDefaultFIS()));
+		COBALT_HOE = addItem("cobalt_hoe", new CMHoeItem(CobaltToolMaterial.INSTANCE, -4, 0.0F, giveDefaultFIS()));
+
+		COBEX_SWORD = addItem("cobex_sword", new CMSwordItem(CobexToolMaterial.INSTANCE, 3, -2.4F, giveDefaultFIS()));
+		COBEX_SHOVEL = addItem("cobex_shovel", new CMShovelItem(CobexToolMaterial.INSTANCE, 1.5F, -3.0F, giveDefaultFIS()));
+		COBEX_PICKAXE = addItem("cobex_pickaxe", new CMPickaxeItem(CobexToolMaterial.INSTANCE, 1, -2.8F, giveDefaultFIS()));
+		COBEX_AXE = addItem("cobex_axe", new CMAxeItem(CobexToolMaterial.INSTANCE, 7.0F, -3.2F, giveDefaultFIS()));
+		COBEX_HOE = addItem("cobex_hoe", new CMHoeItem(CobexToolMaterial.INSTANCE, -1, -2.0F, giveDefaultFIS()));
     }
 
     private static <T extends Item> T addItem(String name, T item) {
