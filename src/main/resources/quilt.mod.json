@@ -1,0 +1,42 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "de.prwh.cobaltmod",
+		"id": "cobalt-mod",
+		"version": "${version}",
+		"metadata": {
+			"name": "Cobalt Mod - Think Blue",
+			"description": "This mod adds the ore Cobalt and a lot more things themed around it",
+			"contributors": {
+				"Dragonisser": "Owner"
+			},
+			"contact": {
+				"homepage": "https://modrinth.com/mod/cobalt-mod",
+				"issues": "https://github.com/Dragonisser/CobaltMod-3/issues",
+				"sources": "https://github.com/Dragonisser/CobaltMod-3"
+			},
+			"icon": "assets/mod_cobalt/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "de.prwh.cobaltmod.core.CobaltMod",
+			"client_init": "de.prwh.cobaltmod.core.CobaltModClient",
+			"server_init": "de.prwh.cobaltmod.core.CobaltModServer"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.16.0-"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=1.0.0-"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.18"
+			}
+		]
+	},
+	"mixin": "mod_cobalt.mixins.json"
+}

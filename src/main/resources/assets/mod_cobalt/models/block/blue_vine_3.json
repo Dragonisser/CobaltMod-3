@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "mod_cobalt:blocks/blue_vine",
-        "vine": "mod_cobalt:blocks/blue_vine"
+        "particle": "mod_cobalt:block/blue_vine",
+        "vine": "mod_cobalt:block/blue_vine"
     },
     "elements": [
         {   "from": [ 15.2, 0, 0 ],

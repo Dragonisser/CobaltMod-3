@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "mod_cobalt:items/cobalt_pickaxe"
+        "layer0": "mod_cobalt:item/cobalt_pickaxe"
     }
 }

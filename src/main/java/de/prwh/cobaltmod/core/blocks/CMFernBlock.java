@@ -15,7 +15,6 @@ public class CMFernBlock extends CMPlantBlock {
         super(settings);
     }
 
-    @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }

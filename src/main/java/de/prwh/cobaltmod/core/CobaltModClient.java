@@ -1,16 +1,17 @@
 package de.prwh.cobaltmod.core;
 
 import de.prwh.cobaltmod.core.blocks.CMBlocks;
-import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.minecraft.client.particle.SuspendParticle;
 import net.minecraft.client.render.RenderLayer;
+import org.quiltmc.loader.api.ModContainer;
+import org.quiltmc.qsl.base.api.entrypoint.client.ClientModInitializer;
 
 public class CobaltModClient implements ClientModInitializer {
 
-    @Override
-    public void onInitializeClient() {
+	@Override
+	public void onInitializeClient(ModContainer mod) {
         BlockRenderLayerMap.INSTANCE.putBlock(CMBlocks.COBEX_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(CMBlocks.TALL_COBEX_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(CMBlocks.BLUE_GRASS, RenderLayer.getCutout());
@@ -21,6 +22,8 @@ public class CobaltModClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(CMBlocks.COBEX_TORCH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(CMBlocks.COBEX_WALL_TORCH, RenderLayer.getCutout());
 
+
+
         ParticleFactoryRegistry.getInstance().register(CobaltMod.COBALT_AURA, SuspendParticle.MyceliumFactory::new);
-    }
+	}
 }
