@@ -15,7 +15,8 @@ public class CobaltModClient implements ClientModInitializer {
 	public void onInitializeClient(ModContainer mod) {
 		BlockRenderLayerMap.put(RenderLayer.getCutout(), CMBlocks.COBEX_SAPLING, CMBlocks.TALL_COBEX_SAPLING,
 			CMBlocks.BLUE_GRASS, CMBlocks.CLEMATIS_FLOWER, CMBlocks.BELL_FLOWER, CMBlocks.GLOW_FLOWER,
-			CMBlocks.RED_CABBAGE_CROP, CMBlocks.COBEX_TORCH, CMBlocks.COBEX_WALL_TORCH, CMBlocks.BLUEBERRY_BUSH);
+			CMBlocks.RED_CABBAGE_CROP, CMBlocks.COBEX_TORCH, CMBlocks.COBEX_WALL_TORCH, CMBlocks.BLUEBERRY_BUSH,
+			CMBlocks.BLUE_VINE);
 
 		ParticleFactoryRegistry.getInstance().register(CobaltMod.COBALT_AURA, SuspendParticle.MyceliumFactory::new);
 	}

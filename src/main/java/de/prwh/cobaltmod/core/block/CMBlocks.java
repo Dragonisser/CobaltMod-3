@@ -118,6 +118,8 @@ public class CMBlocks {
         PORTAL_FRAME = addBlock("portal_frame", new Block(QuiltBlockSettings.of(Material.STONE).strength(-1.0F, 3600000.0F).dropsNothing()));
         HARDENED_CORRUPTED_STONE = addBlock("hardened_corrupted_stone", new Block(AbstractBlock.Settings.copy(CORRUPTED_STONE)));
 		BLUEBERRY_BUSH = addBlock("blueberry_bush", new BlueBerryBushBlock(QuiltBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)));
+
+		BLUE_VINE = addBlock("blue_vine", new VineBlock(QuiltBlockSettings.of(Material.REPLACEABLE_PLANT).noCollision().ticksRandomly().strength(0.2F).sounds(BlockSoundGroup.VINE)));
 		//COBEX_CHEST = addBlock("cobex_chest", new ChestBlock(QuiltBlockSettings.of(Material.WOOD).strength(2.5F).sounds(BlockSoundGroup.WOOD), () -> BlockEntityType.CHEST));
 	}
 

@@ -25,15 +25,6 @@ public class BlueBerryBushBlock extends SweetBerryBushBlock {
 	public BlueBerryBushBlock(Settings settings) {
 		super(settings);
 	}
-	/*
-	public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-		return !state.canPlaceAt(world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
-	}
-	public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-		BlockPos blockPos = pos.down();
-		return this.canPlantOnTop(world.getBlockState(blockPos), world, blockPos);
-	}
-	*/
 
 	@Override
 	protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {

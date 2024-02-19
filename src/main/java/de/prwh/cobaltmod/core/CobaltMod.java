@@ -3,6 +3,8 @@ package de.prwh.cobaltmod.core;
 import de.prwh.cobaltmod.core.api.CMReplace;
 import de.prwh.cobaltmod.core.block.CMBlocks;
 import de.prwh.cobaltmod.core.item.CMItems;
+import de.prwh.cobaltmod.core.world.gen.treedecorator.LeavesBlueVineTreeDecorator;
+import de.prwh.cobaltmod.mixin.TreeDecoratorTypeInvoker;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
@@ -23,6 +25,7 @@ import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.feature.util.ConfiguredFeatureUtil;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
@@ -50,6 +53,9 @@ public class CobaltMod implements ModInitializer {
 	public static FoodComponent RED_CABBAGE;
 	public static FoodComponent COOKED_RED_CABBAGE;
 
+	//TreeDecorator
+	public static TreeDecoratorType<LeavesBlueVineTreeDecorator> LEAVES_BLUE_VINE_TREE_DECORATOR;
+
 	@Override
 	public void onInitialize(ModContainer mod) {
 		LOGGER.info("Hello Quilt world from {}!", mod.metadata().name());
@@ -75,6 +81,8 @@ public class CobaltMod implements ModInitializer {
 		BLUE_BERRY = (new FoodComponent.Builder()).hunger(1).saturationModifier(0.6F).build();
 		RED_CABBAGE = (new FoodComponent.Builder()).hunger(2).saturationModifier(0.6F).build();
 		COOKED_RED_CABBAGE = (new FoodComponent.Builder()).hunger(4).saturationModifier(0.6F).build();
+
+		LEAVES_BLUE_VINE_TREE_DECORATOR = TreeDecoratorTypeInvoker.callRegister("mod_cobalt:leaves_blue_vine_tree_decorator", LeavesBlueVineTreeDecorator.CODEC);
 
 		CustomPortalBuilder.beginPortal()
 			.frameBlock(CMBlocks.PORTAL_FRAME)
