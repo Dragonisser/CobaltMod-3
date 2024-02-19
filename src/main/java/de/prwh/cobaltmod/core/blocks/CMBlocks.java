@@ -25,8 +25,10 @@ public class CMBlocks {
     public static Block COBALT_BLOCK;
     public static Block COBEX_LOG;
     public static Block COBEX_PLANKS;
-    public static Block COBEX_LEAVES;
-    public static Block COBEX_SAPLING;
+	public static Block COBEX_SAPLING;
+	public static Block TALL_COBEX_SAPLING;
+	public static Block COBEX_LEAVES;
+	public static Block TALL_COBEX_LEAVES;
     public static Block BLUE_GRASS;
 
     public static Block CLEMATIS_FLOWER;
@@ -73,8 +75,6 @@ public class CMBlocks {
     public static Block COBALT_DIRT;
     public static Block FARMLAND;
     public static Block PODIUM;
-    public static Block TALL_COBEX_SAPLING;
-    public static Block TALL_COBEX_LEAVES;
     public static Block LOCKED_COBALT_CHEST;
     public static Block COBALT_CHEST;
 
@@ -99,8 +99,10 @@ public class CMBlocks {
         COBEX_LOG = addBlock("cobex_log", new PillarBlock(QuiltBlockSettings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD)));
         COBEX_PLANKS = addBlock("cobex_planks", new Block(QuiltBlockSettings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD)));
         COBEX_LEAVES = addBlock("cobex_leaves", createLeavesBlock());
-        COBEX_SAPLING = addBlock("cobex_sapling", new CMSaplingBlock(new CobexSaplingGenerator(), QuiltBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
-        BLUE_GRASS = addBlock("blue_grass", new CMFernBlock(QuiltBlockSettings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+		TALL_COBEX_LEAVES = addBlock("tall_cobex_leaves", createLeavesBlock());
+		COBEX_SAPLING = addBlock("cobex_sapling", new CMSaplingBlock(new CobexSaplingGenerator(), QuiltBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+		TALL_COBEX_SAPLING = addBlock("tall_cobex_sapling", new CMSaplingBlock(new TallCobexSaplingGenerator(), QuiltBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+		BLUE_GRASS = addBlock("blue_grass", new CMFernBlock(QuiltBlockSettings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
         CLEMATIS_FLOWER = addBlock("clematis_flower", new CMFernBlock(QuiltBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
         BELL_FLOWER = addBlock("bell_flower", new CMFernBlock(QuiltBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
         GLOW_FLOWER = addBlock("glow_flower", new CMFernBlock(QuiltBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque().luminance(10)));
@@ -115,9 +117,6 @@ public class CMBlocks {
         COBALT_BRICK_SLAB = addBlock("cobalt_brick_slab", new SlabBlock(QuiltBlockSettings.of(Material.STONE).strength(2.0F, 3.0F).sounds(BlockSoundGroup.STONE)));
         PORTAL_FRAME = addBlock("portal_frame", new Block(QuiltBlockSettings.of(Material.STONE).strength(-1.0F, 3600000.0F).dropsNothing()));
         HARDENED_CORRUPTED_STONE = addBlock("hardened_corrupted_stone", new Block(AbstractBlock.Settings.copy(CORRUPTED_STONE)));
-
-        TALL_COBEX_SAPLING = addBlock("tall_cobex_sapling", new CMSaplingBlock(new TallCobexSaplingGenerator(), QuiltBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
-        TALL_COBEX_LEAVES = addBlock("tall_cobex_leaves", createLeavesBlock());
     }
 
     private static <T extends Block> T addBlock(String name, T block) {

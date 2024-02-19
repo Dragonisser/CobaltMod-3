@@ -16,15 +16,6 @@ public class CMLeavesBlock extends LeavesBlock {
     }
 
     @Override
-    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (!(Boolean) state.get(PERSISTENT) && (Integer) state.get(DISTANCE) == 7) {
-            dropStacks(state, world, pos);
-            world.removeBlock(pos, false);
-        }
-
-    }
-
-    @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         world.setBlockState(pos, updateDistanceFromLogs(state, world, pos), 3);
     }
@@ -50,7 +41,7 @@ public class CMLeavesBlock extends LeavesBlock {
     @Override
 	public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
 		int i = getDistanceFromLog(neighborState) + 1;
-		if (i != 1 || (Integer)state.get(DISTANCE) != i) {
+		if (i != 1 || state.get(DISTANCE) != i) {
 			world.scheduleBlockTick(pos, this, 1);
 		}
 
