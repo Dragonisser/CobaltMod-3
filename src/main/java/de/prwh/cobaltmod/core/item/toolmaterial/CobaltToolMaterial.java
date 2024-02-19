@@ -1,40 +1,40 @@
-package de.prwh.cobaltmod.core.items.toolmaterial;
+package de.prwh.cobaltmod.core.item.toolmaterial;
 
-import de.prwh.cobaltmod.core.blocks.CMBlocks;
+import de.prwh.cobaltmod.core.item.CMItems;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class CobexToolMaterial implements ToolMaterial {
+public class CobaltToolMaterial implements ToolMaterial {
 
-	public static final CobexToolMaterial INSTANCE = new CobexToolMaterial();
+	public static final CobaltToolMaterial INSTANCE = new CobaltToolMaterial();
 
 	@Override
 	public int getDurability() {
-		return 150;
+		return 2000;
 	}
 
 	@Override
 	public float getMiningSpeedMultiplier() {
-		return 6.0f;
+		return 10.0f;
 	}
 
 	@Override
 	public float getAttackDamage() {
-		return 1.0f;
+		return 4.0f;
 	}
 
 	@Override
 	public int getMiningLevel() {
-		return 1;
+		return 4;
 	}
 
 	@Override
 	public int getEnchantability() {
-		return 10;
+		return 20;
 	}
 
 	@Override
 	public Ingredient getRepairIngredient() {
-		return Ingredient.ofItems(CMBlocks.COBEX_PLANKS);
+		return Ingredient.ofItems(CMItems.COBALT_INGOT);
 	}
 }

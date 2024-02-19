@@ -1,4 +1,4 @@
-package de.prwh.cobaltmod.core.items;
+package de.prwh.cobaltmod.core.item;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;

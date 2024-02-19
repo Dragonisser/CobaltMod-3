@@ -3,8 +3,8 @@ package de.prwh.cobaltmod.core.api;
 import java.util.*;
 
 import de.prwh.cobaltmod.core.CobaltMod;
-import de.prwh.cobaltmod.core.blocks.CMBlocks;
-import de.prwh.cobaltmod.core.blocks.CobaltGrassBlock;
+import de.prwh.cobaltmod.core.block.CMBlocks;
+import de.prwh.cobaltmod.core.block.CobaltGrassBlock;
 import net.minecraft.block.*;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
@@ -27,16 +27,16 @@ public class CMReplace {
 
 	/***
 	 * Gets the map of blocks
-	 * 
+	 *
 	 * @return map
 	 */
 	public static Map<Block, Block> getSpread() {
 		return map;
 	}
-	
+
 	/***
 	 * Gets the list of flowers
-	 * 
+	 *
 	 * @return list_flowers
 	 */
 	public static List<Block> getFlowers() {
@@ -45,7 +45,7 @@ public class CMReplace {
 
 	/***
 	 * Adds the target and replace block to the list
-	 * 
+	 *
 	 * @param target
 	 *            = the block that gets replaced
 	 * @param replace
@@ -57,7 +57,7 @@ public class CMReplace {
 
 	/***
 	 * Adds the flower to the flower list
-	 * 
+	 *
 	 * @param flower
 	 *            = the block that gets added to the flower list
 	 */

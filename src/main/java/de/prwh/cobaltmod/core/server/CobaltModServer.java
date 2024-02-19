@@ -1,4 +1,4 @@
-package de.prwh.cobaltmod.core;
+package de.prwh.cobaltmod.core.server;
 
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.server.DedicatedServerModInitializer;

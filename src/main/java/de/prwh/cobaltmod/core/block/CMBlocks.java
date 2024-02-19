@@ -1,8 +1,8 @@
-package de.prwh.cobaltmod.core.blocks;
+package de.prwh.cobaltmod.core.block;
 
 import de.prwh.cobaltmod.core.CobaltMod;
-import de.prwh.cobaltmod.core.blocks.sapling.CobexSaplingGenerator;
-import de.prwh.cobaltmod.core.blocks.sapling.TallCobexSaplingGenerator;
+import de.prwh.cobaltmod.core.block.sapling.CobexSaplingGenerator;
+import de.prwh.cobaltmod.core.block.sapling.TallCobexSaplingGenerator;
 import net.minecraft.block.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
@@ -117,7 +117,9 @@ public class CMBlocks {
         COBALT_BRICK_SLAB = addBlock("cobalt_brick_slab", new SlabBlock(QuiltBlockSettings.of(Material.STONE).strength(2.0F, 3.0F).sounds(BlockSoundGroup.STONE)));
         PORTAL_FRAME = addBlock("portal_frame", new Block(QuiltBlockSettings.of(Material.STONE).strength(-1.0F, 3600000.0F).dropsNothing()));
         HARDENED_CORRUPTED_STONE = addBlock("hardened_corrupted_stone", new Block(AbstractBlock.Settings.copy(CORRUPTED_STONE)));
-    }
+
+		//COBEX_CHEST = addBlock("cobex_chest", new ChestBlock(QuiltBlockSettings.of(Material.WOOD).strength(2.5F).sounds(BlockSoundGroup.WOOD), () -> BlockEntityType.CHEST));
+	}
 
     private static <T extends Block> T addBlock(String name, T block) {
         return addBlock(name, block, true, true);

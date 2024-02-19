@@ -1,4 +1,4 @@
-package de.prwh.cobaltmod.core.blocks.sapling;
+package de.prwh.cobaltmod.core.block.sapling;
 
 import de.prwh.cobaltmod.core.CobaltMod;
 import net.minecraft.block.sapling.SaplingGenerator;
@@ -7,11 +7,11 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 
 import java.util.Random;
 
-public class TallCobexSaplingGenerator extends SaplingGenerator {
-    public TallCobexSaplingGenerator() {
+public class CobexSaplingGenerator extends SaplingGenerator {
+    public CobexSaplingGenerator() {
     }
 
     protected Holder<? extends ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
-        return CobaltMod.TALL_COBEX;
+        return CobaltMod.COBEX;
     }
 }

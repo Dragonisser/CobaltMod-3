@@ -1,4 +1,4 @@
-package de.prwh.cobaltmod.core.blocks;
+package de.prwh.cobaltmod.core.block;
 
 import de.prwh.cobaltmod.core.CobaltMod;
 import net.minecraft.advancement.Advancement;

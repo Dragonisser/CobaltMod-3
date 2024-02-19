@@ -1,6 +1,6 @@
-package de.prwh.cobaltmod.core.blocks;
+package de.prwh.cobaltmod.core.block;
 
-import de.prwh.cobaltmod.core.items.CMItems;
+import de.prwh.cobaltmod.core.item.CMItems;
 import net.minecraft.item.ItemConvertible;
 
 public class RedCabbageBlock extends CMCropBlock {

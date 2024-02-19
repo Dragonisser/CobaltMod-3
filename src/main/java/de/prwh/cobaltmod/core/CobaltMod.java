@@ -1,8 +1,8 @@
 package de.prwh.cobaltmod.core;
 
 import de.prwh.cobaltmod.core.api.CMReplace;
-import de.prwh.cobaltmod.core.blocks.CMBlocks;
-import de.prwh.cobaltmod.core.items.CMItems;
+import de.prwh.cobaltmod.core.block.CMBlocks;
+import de.prwh.cobaltmod.core.item.CMItems;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;

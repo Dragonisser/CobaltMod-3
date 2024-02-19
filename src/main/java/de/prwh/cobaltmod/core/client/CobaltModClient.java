@@ -1,6 +1,7 @@
-package de.prwh.cobaltmod.core;
+package de.prwh.cobaltmod.core.client;
 
-import de.prwh.cobaltmod.core.blocks.CMBlocks;
+import de.prwh.cobaltmod.core.CobaltMod;
+import de.prwh.cobaltmod.core.block.CMBlocks;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.minecraft.client.particle.SuspendParticle;
 import net.minecraft.client.render.RenderLayer;

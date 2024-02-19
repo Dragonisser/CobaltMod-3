@@ -1,9 +1,9 @@
-package de.prwh.cobaltmod.core.items;
+package de.prwh.cobaltmod.core.item;
 
 import de.prwh.cobaltmod.core.CobaltMod;
-import de.prwh.cobaltmod.core.blocks.CMBlocks;
-import de.prwh.cobaltmod.core.items.toolmaterial.CobaltToolMaterial;
-import de.prwh.cobaltmod.core.items.toolmaterial.CobexToolMaterial;
+import de.prwh.cobaltmod.core.block.CMBlocks;
+import de.prwh.cobaltmod.core.item.toolmaterial.CobaltToolMaterial;
+import de.prwh.cobaltmod.core.item.toolmaterial.CobexToolMaterial;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;

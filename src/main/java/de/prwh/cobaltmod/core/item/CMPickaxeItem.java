@@ -1,4 +1,4 @@
-package de.prwh.cobaltmod.core.items;
+package de.prwh.cobaltmod.core.item;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.MiningToolItem;

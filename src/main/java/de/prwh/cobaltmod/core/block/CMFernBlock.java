@@ -1,4 +1,4 @@
-package de.prwh.cobaltmod.core.blocks;
+package de.prwh.cobaltmod.core.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
