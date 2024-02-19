@@ -1,6 +1,7 @@
 package de.prwh.cobaltmod.core.item;
 
 import de.prwh.cobaltmod.core.CobaltMod;
+import de.prwh.cobaltmod.core.block.BlueBerryBushBlock;
 import de.prwh.cobaltmod.core.block.CMBlocks;
 import de.prwh.cobaltmod.core.item.toolmaterial.CobaltToolMaterial;
 import de.prwh.cobaltmod.core.item.toolmaterial.CobexToolMaterial;
@@ -84,7 +85,7 @@ public class CMItems {
         RED_CABBAGE_SEEDS = addItem("red_cabbage_seeds", new AliasedBlockItem(CMBlocks.RED_CABBAGE_CROP, giveDefaultQIS()));
         COBEX_TORCH = addItem("cobex_torch", new WallStandingBlockItem(CMBlocks.COBEX_TORCH, CMBlocks.COBEX_WALL_TORCH, giveDefaultQIS()));
         FIRE_SHARD = addItem("fire_shard", new Item(giveDefaultQIS()));
-        BLUE_BERRY = addItem("blue_berry", new Item(giveDefaultQIS().food(CobaltMod.BLUE_BERRY)));
+        BLUE_BERRY = addItem("blue_berry", new AliasedBlockItem(CMBlocks.BLUEBERRY_BUSH, giveDefaultQIS().food(CobaltMod.BLUE_BERRY)));
         OVERWORLD_ESSENCE = addItem("overworld_essence", new Item(giveDefaultQIS()));
         COBALDIS_ESSENCE = addItem("cobaldis_essence", new Item(giveDefaultQIS()));
         STONE_CRYSTAL = addItem("stone_crystal", new Item(giveDefaultQIS()));
