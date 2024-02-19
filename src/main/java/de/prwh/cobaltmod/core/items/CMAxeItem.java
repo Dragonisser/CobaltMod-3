@@ -12,7 +12,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 
 import java.util.Optional;
@@ -25,6 +24,7 @@ public class CMAxeItem extends MiningToolItem {
 		super(f, g, toolMaterial, BlockTags.AXE_MINEABLE, settings);
 	}
 
+	@Override
 	public ActionResult useOnBlock(ItemUsageContext context) {
 		World world = context.getWorld();
 		BlockPos blockPos = context.getBlockPos();
@@ -32,9 +32,7 @@ public class CMAxeItem extends MiningToolItem {
 		BlockState blockState = world.getBlockState(blockPos);
 		Optional<BlockState> optional = this.getStrippedState(blockState);
 		Optional<BlockState> optional2 = Oxidizable.getDecreasedOxidationState(blockState);
-		Optional<BlockState> optional3 = Optional.ofNullable((Block)((BiMap<?, ?>) HoneycombItem.WAXED_TO_UNWAXED_BLOCKS.get()).get(blockState.getBlock())).map((block) -> {
-			return block.getStateWithProperties(blockState);
-		});
+		Optional<BlockState> optional3 = Optional.ofNullable((Block)((BiMap<?, ?>) HoneycombItem.WAXED_TO_UNWAXED_BLOCKS.get()).get(blockState.getBlock())).map(block -> block.getStateWithProperties(blockState));
 		ItemStack itemStack = context.getStack();
 		Optional<BlockState> optional4 = Optional.empty();
 		if (optional.isPresent()) {
@@ -51,15 +49,13 @@ public class CMAxeItem extends MiningToolItem {
 		}
 
 		if (optional4.isPresent()) {
-			if (playerEntity instanceof ServerPlayerEntity) {
-				Criteria.ITEM_USED_ON_BLOCK.trigger((ServerPlayerEntity)playerEntity, blockPos, itemStack);
+			if (playerEntity instanceof ServerPlayerEntity serverPlayerEntity) {
+				Criteria.ITEM_USED_ON_BLOCK.trigger(serverPlayerEntity, blockPos, itemStack);
 			}
 
-			world.setBlockState(blockPos, (BlockState)optional4.get(), 11);
+			world.setBlockState(blockPos, optional4.get(), 11);
 			if (playerEntity != null) {
-				itemStack.damage(1, playerEntity, (p) -> {
-					p.sendToolBreakStatus(context.getHand());
-				});
+				itemStack.damage(1, playerEntity, p -> p.sendToolBreakStatus(context.getHand()));
 			}
 
 			return ActionResult.success(world.isClient);
@@ -69,9 +65,7 @@ public class CMAxeItem extends MiningToolItem {
 	}
 
 	private Optional<BlockState> getStrippedState(BlockState state) {
-		return Optional.ofNullable((Block)STRIPPED_BLOCKS.get(state.getBlock())).map((block) -> {
-			return (BlockState)block.getDefaultState().with(PillarBlock.AXIS, (Direction.Axis)state.get(PillarBlock.AXIS));
-		});
+		return Optional.ofNullable(STRIPPED_BLOCKS.get(state.getBlock())).map(block -> block.getDefaultState().with(PillarBlock.AXIS, state.get(PillarBlock.AXIS)));
 	}
 
 	static {

@@ -11,6 +11,7 @@ public class CMCropBlock extends CropBlock {
         super(settings);
     }
 
+    @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
         return floor.isIn(CMBlockTags.FARMLAND);
     }
