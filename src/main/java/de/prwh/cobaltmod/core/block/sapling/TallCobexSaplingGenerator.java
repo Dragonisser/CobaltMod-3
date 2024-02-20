@@ -12,6 +12,6 @@ public class TallCobexSaplingGenerator extends SaplingGenerator {
     }
 
     protected Holder<? extends ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
-        return CobaltMod.TALL_COBEX;
+        return CobaltMod.getTreeFeatureTallCobex();
     }
 }

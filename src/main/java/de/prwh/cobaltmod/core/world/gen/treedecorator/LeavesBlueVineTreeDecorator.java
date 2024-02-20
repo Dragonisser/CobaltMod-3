@@ -3,7 +3,6 @@ package de.prwh.cobaltmod.core.world.gen.treedecorator;
 import com.mojang.serialization.Codec;
 import de.prwh.cobaltmod.core.block.CMBlocks;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.VineBlock;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
