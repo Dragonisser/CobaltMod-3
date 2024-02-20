@@ -19,16 +19,70 @@
               0
             ],
             "continentalness": [
-              -0.455,
-              -0.25
+              -1.05,
+              -0.455
             ],
             "erosion": [
-              0.25,
+              -1,
               1
             ],
             "weirdness": [
               -1,
-              -0.2
+              1
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mod_cobalt:ocean",
+          "parameters": {
+            "temperature": [
+              0,
+              0
+            ],
+            "humidity": [
+              0,
+              0
+            ],
+            "continentalness": [
+              -0.455,
+              -0.19
+            ],
+            "erosion": [
+              -1,
+              1
+            ],
+            "weirdness": [
+              -1,
+              1
+            ],
+            "depth": 1,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mod_cobalt:deep_swamp",
+          "parameters": {
+            "temperature": [
+              0,
+              0
+            ],
+            "humidity": [
+              0,
+              0
+            ],
+            "continentalness": [
+              -0.11,
+              1
+            ],
+            "erosion": [
+              0.55,
+              1
+            ],
+            "weirdness": [
+              -1,
+              -0.9333
             ],
             "depth": 0,
             "offset": 0
@@ -46,16 +100,151 @@
               0
             ],
             "continentalness": [
-              -0.25,
-              -0.11
+              -0.11,
+              1
             ],
             "erosion": [
-              0.05,
-              0.25
+              0.55,
+              1
             ],
             "weirdness": [
-              -0.2,
-              -0.1
+              -0.4,
+              -0.2666
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mod_cobalt:deep_swamp",
+          "parameters": {
+            "temperature": [
+              0,
+              0
+            ],
+            "humidity": [
+              0,
+              0
+            ],
+            "continentalness": [
+              -0.11,
+              1
+            ],
+            "erosion": [
+              0.55,
+              1
+            ],
+            "weirdness": [
+              -0.2666,
+              -0.05
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mod_cobalt:deep_swamp",
+          "parameters": {
+            "temperature": [
+              0,
+              0
+            ],
+            "humidity": [
+              0,
+              0
+            ],
+            "continentalness": [
+              -0.11,
+              1
+            ],
+            "erosion": [
+              0.55,
+              1
+            ],
+            "weirdness": [
+              -0.05,
+              0.05
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mod_cobalt:deep_swamp",
+          "parameters": {
+            "temperature": [
+              0,
+              0
+            ],
+            "humidity": [
+              0,
+              0
+            ],
+            "continentalness": [
+              -0.11,
+              1
+            ],
+            "erosion": [
+              0.55,
+              1
+            ],
+            "weirdness": [
+              0.05,
+              0.2666
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mod_cobalt:deep_swamp",
+          "parameters": {
+            "temperature": [
+              0,
+              0
+            ],
+            "humidity": [
+              0,
+              0
+            ],
+            "continentalness": [
+              -0.11,
+              1
+            ],
+            "erosion": [
+              0.55,
+              1
+            ],
+            "weirdness": [
+              0.2666,
+              0.4
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mod_cobalt:deep_swamp",
+          "parameters": {
+            "temperature": [
+              0,
+              0
+            ],
+            "humidity": [
+              0,
+              0
+            ],
+            "continentalness": [
+              -0.11,
+              1
+            ],
+            "erosion": [
+              0.55,
+              1
+            ],
+            "weirdness": [
+              0.9333,
+              1
             ],
             "depth": 0,
             "offset": 0
@@ -181,16 +370,70 @@
               0
             ],
             "continentalness": [
-              0.8,
+              0.03,
+              1
+            ],
+            "erosion": [
+              -0.7799,
+              -0.375
+            ],
+            "weirdness": [
+              -0.7666,
+              -0.5666
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mod_cobalt:higherlands",
+          "parameters": {
+            "temperature": [
+              0,
+              0
+            ],
+            "humidity": [
+              0,
+              0
+            ],
+            "continentalness": [
+              -0.19,
               1
             ],
             "erosion": [
               -1,
-              -0.4
+              -0.7799
             ],
             "weirdness": [
-              0.5,
+              -0.7666,
+              -0.5666
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mod_cobalt:higherlands",
+          "parameters": {
+            "temperature": [
+              0,
+              0
+            ],
+            "humidity": [
+              0,
+              0
+            ],
+            "continentalness": [
+              0.03,
               1
+            ],
+            "erosion": [
+              -1,
+              -0.7799
+            ],
+            "weirdness": [
+              -0.9333,
+              -0.7666
             ],
             "depth": 0,
             "offset": 0
