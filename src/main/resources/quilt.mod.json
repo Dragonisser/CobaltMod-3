@@ -20,8 +20,8 @@
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
 			"init": "de.prwh.cobaltmod.core.CobaltMod",
-			"client_init": "de.prwh.cobaltmod.core.CobaltModClient",
-			"server_init": "de.prwh.cobaltmod.core.CobaltModServer"
+			"client_init": "de.prwh.cobaltmod.core.client.CobaltModClient",
+			"server_init": "de.prwh.cobaltmod.core.server.CobaltModServer"
 		},
 		"depends": [
 			{

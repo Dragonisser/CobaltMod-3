@@ -29,8 +29,9 @@
     [],
     [],
     [
-      "mod_cobalt:trees_cobex_forest",
-      "mod_cobalt:patch_grass_forest"
+      "mod_cobalt:flower_default",
+      "mod_cobalt:patch_grass_forest",
+      "mod_cobalt:trees_cobex_forest"
     ],
     []
   ],

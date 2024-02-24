@@ -1,12 +1,18 @@
 {
+  "type": "minecraft:random_selector",
   "config": {
     "features": [
       {
-        "feature": "mod_cobalt:tall_cobex_tree",
-        "chance": 0.33333334
+        "chance": 0.33333334,
+        "feature": {
+          "feature": "mod_cobalt:tall_cobex_tree",
+          "placement": []
+        }
       }
     ],
-    "default": "mod_cobalt:tall_cobex_tree"
-  },
-  "type": "minecraft:random_selector"
+    "default": {
+      "feature": "mod_cobalt:tall_cobex_tree",
+      "placement": []
+    }
+  }
 }
