@@ -2,7 +2,7 @@
   "type": "mod_cobalt:cobaldis",
   "generator": {
     "type": "minecraft:noise",
-    "seed": 0,
+    "seed": 58923623423,
     "settings": "mod_cobalt:cobaldis",
     "biome_source": {
       "type": "minecraft:multi_noise",

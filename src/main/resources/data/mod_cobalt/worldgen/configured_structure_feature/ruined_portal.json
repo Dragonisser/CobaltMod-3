@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:village",
+  "config": {
+    "start_pool": "mod_cobalt:ruined_portal",
+    "size": 1
+  },
+  //"biomes": "#mod_cobalt:has_structure/ruined_portal",
+  "biomes": "#minecraft:has_structure/mineshaft",
+  "adapt_noise": true,
+  "spawn_overrides": {}
+}

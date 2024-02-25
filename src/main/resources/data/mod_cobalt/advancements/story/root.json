@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "mod_cobalt:cobalt_grass_block"
+      "item": "mod_cobalt:portal_frame"
     },
     "title": {
       "translate": "advancements.mod_cobalt.story.root.title"
@@ -16,13 +16,18 @@
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
   },
   "criteria": {
-    "step_on_block": {
-      "trigger": "minecraft:impossible"
+    "portal": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "mod_cobalt:ruined_portal"
+        }
+      }
     }
   },
   "requirements": [
     [
-      "step_on_block"
+      "portal"
     ]
   ]
 }
