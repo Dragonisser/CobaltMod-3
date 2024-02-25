@@ -24,7 +24,10 @@
             "items": [
               "mod_cobalt:raw_cobalt"
             ],
-            "count": 2
+            "count": {
+              "min": 2,
+              "max": 10
+            }
           }
         ]
       }
