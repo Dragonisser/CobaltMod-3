@@ -22,16 +22,23 @@
         "items": [
           {
             "items": [
-              "mod_cobalt:cobalt_ore"
-            ]
+              "mod_cobalt:raw_cobalt"
+            ],
+            "count": 2
           }
         ]
       }
+    },
+    "parent_locked": {
+      "trigger": "minecraft:impossible"
     }
   },
   "requirements": [
     [
       "get_cobalt_ore"
+    ],
+    [
+      "parent_locked"
     ]
   ]
 }

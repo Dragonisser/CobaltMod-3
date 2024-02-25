@@ -22,7 +22,6 @@ import java.util.Random;
 public class CobaltGrassBlock extends Block {
 
     static final String CRITERION = "step_on_block";
-    static final Identifier IDENTIFIER = new Identifier(CobaltMod.MOD_ID, "story/root");
 
     public CobaltGrassBlock(Settings settings) {
         super(settings);
@@ -65,14 +64,9 @@ public class CobaltGrassBlock extends Block {
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
 
-        //TODO adjust for different boot types
+        //TODO adjust for different boot types - Api?
         if (!entity.isFireImmune() && entity instanceof LivingEntity livingEntity && !EnchantmentHelper.hasFrostWalker(livingEntity)) {
             entity.damage(DamageSource.MAGIC, 1.0F);
-        }
-
-        if (entity instanceof ServerPlayerEntity serverPlayerEntity) {
-            Advancement advancement = serverPlayerEntity.server.getAdvancementLoader().get(IDENTIFIER);
-            serverPlayerEntity.getAdvancementTracker().grantCriterion(advancement, CRITERION);
         }
         super.onSteppedOn(world, pos, state, entity);
     }
