@@ -29,6 +29,7 @@
     [],
     [],
     [
+      "mod_cobalt:ore_cobalt",
       "mod_cobalt:patch_grass_normal"
     ],
     []

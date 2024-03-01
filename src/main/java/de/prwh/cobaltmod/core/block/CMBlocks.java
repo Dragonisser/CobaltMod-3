@@ -21,6 +21,7 @@ public class CMBlocks {
 
     // Blocks
     public static Block COBALT_ORE;
+	public static Block HARDENED_COBALT_ORE;
     public static Block COBALT_GRASS_BLOCK;
     public static Block COBALT_BLOCK;
     public static Block COBEX_LOG;
@@ -91,8 +92,9 @@ public class CMBlocks {
     }
 
     public static void init() {
-        COBALT_ORE = addBlock("cobalt_ore", new OreBlock(QuiltBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)));
-        CORRUPTED_STONE = addBlock("corrupted_stone", new Block(QuiltBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F)));
+        COBALT_ORE = addBlock("cobalt_ore", new OreBlock(QuiltBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(0, 2)));
+		HARDENED_COBALT_ORE = addBlock("hardened_cobalt_ore", new OreBlock(QuiltBlockSettings.copy(COBALT_ORE).sounds(BlockSoundGroup.STONE).requiresTool().strength(4.5F, 3.0F), UniformIntProvider.create(0, 2)));
+		CORRUPTED_STONE = addBlock("corrupted_stone", new Block(QuiltBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 3.0F)));
         COBALT_GRASS_BLOCK = addBlock("cobalt_grass_block", new CobaltGrassBlock(QuiltBlockSettings.of(Material.SOLID_ORGANIC).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRASS)));
         COBALT_DIRT = addBlock("cobalt_dirt", new Block(QuiltBlockSettings.of(Material.SOIL).strength(0.5F).sounds(BlockSoundGroup.GRAVEL)));
         COBALT_BLOCK = addBlock("cobalt_block", new Block(QuiltBlockSettings.of(Material.METAL).requiresTool().strength(5.0F, 6.0F).sounds(BlockSoundGroup.METAL)));
