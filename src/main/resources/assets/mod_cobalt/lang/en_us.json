@@ -210,5 +210,7 @@
     "chatmessage.cobbaltchest.key_wrong": "I need a Key and not",
 
     "key.backpack.desc": "Open Backpack",
-    "key.cobaltmod.label": "CobaltMod"
+    "key.cobaltmod.label": "CobaltMod",
+
+    "mod_cobalt.midnightconfig.title": "CobaltMod Config"
 }

@@ -2,9 +2,11 @@ package de.prwh.cobaltmod.core;
 
 import de.prwh.cobaltmod.core.api.CMReplace;
 import de.prwh.cobaltmod.core.block.CMBlocks;
+import de.prwh.cobaltmod.core.config.Config;
 import de.prwh.cobaltmod.core.item.CMItems;
 import de.prwh.cobaltmod.core.world.gen.treedecorator.LeavesBlueVineTreeDecorator;
 import de.prwh.cobaltmod.mixin.TreeDecoratorTypeInvoker;
+import eu.midnightdust.lib.config.MidnightConfig;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Block;
@@ -78,7 +80,6 @@ public class CobaltMod implements ModInitializer {
 		CobaltMod.TALL_COBEX = configuredFeatureHolder;
 	}
 
-
 	@Override
 	public void onInitialize(ModContainer mod) {
 
@@ -114,6 +115,8 @@ public class CobaltMod implements ModInitializer {
 		CMReplace.addFlowers(CMBlocks.CLEMATIS_FLOWER);
 		CMReplace.addFlowers(CMBlocks.BELL_FLOWER);
 		CMReplace.addFlowers(CMBlocks.GLOW_FLOWER);
+
+		MidnightConfig.init(MOD_ID, Config.class);
 	}
 
 	private static TreeFeatureConfig.Builder builder(Block log, Block leaves, int baseHeight, int firstRandomHeight, int secondRandomHeight, int radius) {

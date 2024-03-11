@@ -21,7 +21,10 @@
 		"entrypoints": {
 			"init": "de.prwh.cobaltmod.core.CobaltMod",
 			"client_init": "de.prwh.cobaltmod.core.client.CobaltModClient",
-			"server_init": "de.prwh.cobaltmod.core.server.CobaltModServer"
+			"server_init": "de.prwh.cobaltmod.core.server.CobaltModServer",
+			"modmenu": [
+				"de.prwh.cobaltmod.core.config.ModMenu"
+			]
 		},
 		"depends": [
 			{
