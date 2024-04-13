@@ -211,5 +211,6 @@
     "key.backpack.desc": "Rucksack öffnen",
     "key.cobaltmod.label": "CobaltMod",
 
-    "mod_cobalt.midnightconfig.title": "CobaltMod Config"
+    "mod_cobalt.midnightconfig.title": "CobaltMod Config",
+    "mod_cobalt.midnightconfig.mod_cobalt_description": "CobaltMod Config Description"
 }
