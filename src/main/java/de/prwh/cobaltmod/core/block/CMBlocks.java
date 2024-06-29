@@ -80,8 +80,7 @@ public class CMBlocks {
     public static Block COBALT_CHEST;
 
     public static Block HARDENED_CORRUPTED_STONE;
-    public static Block PORTAL_FRAME_CAVES;
-    //	public static BlockPortal PORTAL_CAVES;
+
     public static Block BLUISH_MUSHROOM;
     public static Block COBEX_DEAD_BUSH;
 
