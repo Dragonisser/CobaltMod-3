@@ -1,11 +1,14 @@
 plugins {
+	id 'fabric-loom' version '1.10-SNAPSHOT'
 	id 'maven-publish'
-	alias(libs.plugins.quilt.loom)
 }
 
-archivesBaseName = project.archives_base_name
-version = project.version + "-" + project.minecraft_version
+version = project.mod_version
 group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
 
 repositories {
 	// Add repositories to retrieve artifacts from in here.
@@ -13,74 +16,68 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+
 	maven {url = "https://api.modrinth.com/maven"}
 	maven {url = "https://maven.kyrptonaught.dev"}
-	maven {url = "https://maven.terraformersmc.com/releases/"}
+	maven {url = "https://maven.terraformersmc.com"}
+	maven { url "https://maven.shedaniel.me/" }
+	maven { url "https://maven.terraformersmc.com/releases/" }
 }
 
-// All the dependencies are declared at gradle/libs.version.toml and referenced with "libs.<id>"
-// See https://docs.gradle.org/current/userguide/platforms.html for information on how version catalogs work.
 dependencies {
-	minecraft libs.minecraft
+	// To change the versions see the gradle.properties file
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	mappings loom.layered {
-		addLayer quiltMappings.mappings("${libs.quilt.mappings.get()}:v2")
-		// officialMojangMappings() // Uncomment if you want to use Mojang mappings as your primary mappings, falling back on QM for parameters and Javadocs
-	}
-	modImplementation libs.quilt.loader
+	// Fabric API. This is technically optional, but you probably want it anyway.
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	//Custom Portal Api
 	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta52-1.18'
 	include 'net.kyrptonaught:customportalapi:0.0.1-beta52-1.18'
 
-	modImplementation "maven.modrinth:midnightlib:${project.midnightlib_version}"
+	modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
 
-	modApi "com.terraformersmc:modmenu:3.2.5"
-
-	// QSL is not a complete API; You will need Quilted Fabric API to fill in the gaps.
-	// Quilted Fabric API will automatically pull in the correct QSL version.
-	modImplementation libs.quilted.fabric.api
+	modImplementation ("me.shedaniel.cloth:cloth-config-fabric:6.5.133") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
 }
 
 processResources {
-	inputs.property "version", version
+	inputs.property "version", project.version
 
-	filesMatching('quilt.mod.json') {
-		expand "version": version
+	filesMatching("fabric.mod.json") {
+		expand "version": inputs.properties.version
 	}
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.encoding = "UTF-8"
-	// Minecraft 1.18 (1.18-pre2) upwards uses Java 17.
 	it.options.release = 17
 }
 
 java {
-	// Still required by IDEs such as Eclipse and Visual Studio Code
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
-
-	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task if it is present.
+	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
+	// if it is present.
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
 
-	// If this mod is going to be a library, then it should also generate Javadocs in order to aid with developement.
-	// Uncomment this line to generate them.
-	// withJavadocJar()
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
 }
 
-// If you plan to use a different file for the license, don't forget to change the file name here!
 jar {
+	inputs.property "archivesName", project.base.archivesName
+
 	from("LICENSE") {
-		rename { "${it}_${archivesBaseName}" }
+		rename { "${it}_${inputs.properties.archivesName}"}
 	}
 }
 
-// Configure the maven publication
+// configure the maven publication
 publishing {
 	publications {
-		mavenJava(MavenPublication) {
+		create("mavenJava", MavenPublication) {
+			artifactId = project.archives_base_name
 			from components.java
 		}
 	}

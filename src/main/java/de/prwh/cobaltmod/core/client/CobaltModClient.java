@@ -2,18 +2,23 @@ package de.prwh.cobaltmod.core.client;
 
 import de.prwh.cobaltmod.core.CobaltMod;
 import de.prwh.cobaltmod.core.block.CMBlocks;
+import de.prwh.cobaltmod.core.config.ModConfig;
+import me.shedaniel.autoconfig.AutoConfig;
+import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.minecraft.client.particle.SuspendParticle;
 import net.minecraft.client.render.RenderLayer;
-import org.quiltmc.loader.api.ModContainer;
-import org.quiltmc.qsl.base.api.entrypoint.client.ClientModInitializer;
-import org.quiltmc.qsl.block.extensions.api.client.BlockRenderLayerMap;
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 
+@Environment(EnvType.CLIENT)
 public class CobaltModClient implements ClientModInitializer {
 
 	@Override
-	public void onInitializeClient(ModContainer mod) {
-		BlockRenderLayerMap.put(RenderLayer.getCutout(),
+	public void onInitializeClient() {
+		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
 			CMBlocks.COBEX_SAPLING,
 			CMBlocks.TALL_COBEX_SAPLING,
 			CMBlocks.BLUE_GRASS,
@@ -27,5 +32,7 @@ public class CobaltModClient implements ClientModInitializer {
 			CMBlocks.BLUE_VINE);
 
 		ParticleFactoryRegistry.getInstance().register(CobaltMod.COBALT_AURA, SuspendParticle.MyceliumFactory::new);
+
+		AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
 	}
 }

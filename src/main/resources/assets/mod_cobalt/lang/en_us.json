@@ -212,6 +212,5 @@
     "key.backpack.desc": "Open Backpack",
     "key.cobaltmod.label": "CobaltMod",
 
-    "mod_cobalt.midnightconfig.title": "CobaltMod Config",
-    "mod_cobalt.midnightconfig.mod_cobalt_description": "CobaltMod Config Description"
+    "text.autoconfig.mod_cobalt.title": "CobaltMod Config"
 }
