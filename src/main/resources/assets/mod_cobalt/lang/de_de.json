@@ -90,7 +90,7 @@
     "item.mod_cobalt.cobex_shovel": "Cobexholzschaufel",
     "item.mod_cobalt.cobex_sword": "Cobexholzschwert",
     "item.mod_cobalt.cobex_hoe": "Cobexholzhacke",
-    "item.mod_cobalt.cobalt_bow": "Cobaltbogen",
+    "item.mod_cobalt.cobex_bow": "Cobaltbogen",
     "item.mod_cobalt.cobalt_fertilizer": "Cobaltdünger",
     "item.mod_cobalt.cobalt_ingot": "Cobaltbarren",
     "item.mod_cobalt.raw_cobalt": "Rohcobalt",
@@ -117,7 +117,7 @@
     "item.mod_cobalt.purified_crushed_carthun_ore": "Gereinigtes zerstoßenes Carthunerz",
     "item.mod_cobalt.carthun_dust": "Carthunstaub",
     "item.mod_cobalt.carthun_dust_tiny": "Kleines Häufchen Carthunstaub",
-    "item.mod_cobalt.blue_slimeball": "Blauer Schleimball",
+    "item.mod_cobalt.blue_slime_ball": "Blauer Schleimball",
     "item.mod_cobalt.blue_wool": "Blauer Wollknäul",
     "item.mod_cobalt.blue_backpack": "Blauer Rucksack",
     "item.mod_cobalt.cobalt_plate_backpack": "Cobaltbrustpanzer Rucksack",
@@ -157,10 +157,11 @@
     "advancements.mod_cobalt.story.mine_cobalt_ore.title": "Blau wie alles andere",
     "advancements.mod_cobalt.story.mine_cobalt_ore.description": "Baue etwas mehr Cobalterz ab",
 
-    "advancements.mod_cobalt.story.to_cobaldis.title": "Die andere Seite",
-    "advancements.mod_cobalt.story.to_cobaldis.description": "Durchschreite das Portal zu Cobaldis",
+    "advancements.mod_cobalt.story.travel_to_cobaldis.title": "Die andere Seite",
+    "advancements.mod_cobalt.story.travel_to_cobaldis.description": "Durchschreite das Portal zu Cobaldis",
 
-
+    "advancements.mod_cobalt.story.pickup_red_cabbage.title": "It's not even red!",
+    "advancements.mod_cobalt.story.pickup_red_cabbage.description": "Find some Red Cabbage",
 
     "achievement.cobaltachiev": "Die Seuche",
     "achievement.cobaltachiev1": "Heiliges Erz",
@@ -209,5 +210,7 @@
     "chatmessage.cobbaltchest.key_wrong": "Ich brauchen einen Schlüssel und nicht",
 
     "key.backpack.desc": "Rucksack öffnen",
-    "key.cobaltmod.label": "CobaltMod"
+    "key.cobaltmod.label": "CobaltMod",
+
+    "text.autoconfig.mod_cobalt.title": "CobaltMod Config"
 }

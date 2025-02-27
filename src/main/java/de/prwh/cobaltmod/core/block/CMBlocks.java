@@ -3,6 +3,8 @@ package de.prwh.cobaltmod.core.block;
 import de.prwh.cobaltmod.core.CobaltMod;
 import de.prwh.cobaltmod.core.block.sapling.CobexSaplingGenerator;
 import de.prwh.cobaltmod.core.block.sapling.TallCobexSaplingGenerator;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
@@ -13,8 +15,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.BlockView;
-import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
-import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 
 public class CMBlocks {
@@ -80,8 +80,7 @@ public class CMBlocks {
     public static Block COBALT_CHEST;
 
     public static Block HARDENED_CORRUPTED_STONE;
-    public static Block PORTAL_FRAME_CAVES;
-    //	public static BlockPortal PORTAL_CAVES;
+
     public static Block BLUISH_MUSHROOM;
     public static Block COBEX_DEAD_BUSH;
 
@@ -92,37 +91,37 @@ public class CMBlocks {
     }
 
     public static void init() {
-        COBALT_ORE = addBlock("cobalt_ore", new OreBlock(QuiltBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(0, 2)));
-		HARDENED_COBALT_ORE = addBlock("hardened_cobalt_ore", new OreBlock(QuiltBlockSettings.copy(COBALT_ORE).sounds(BlockSoundGroup.STONE).requiresTool().strength(4.5F, 3.0F), UniformIntProvider.create(0, 2)));
-		CORRUPTED_STONE = addBlock("corrupted_stone", new Block(QuiltBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 3.0F)));
-        COBALT_GRASS_BLOCK = addBlock("cobalt_grass_block", new CobaltGrassBlock(QuiltBlockSettings.of(Material.SOLID_ORGANIC).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRASS)));
-        COBALT_DIRT = addBlock("cobalt_dirt", new Block(QuiltBlockSettings.of(Material.SOIL).strength(0.5F).sounds(BlockSoundGroup.GRAVEL)));
-        COBALT_BLOCK = addBlock("cobalt_block", new Block(QuiltBlockSettings.of(Material.METAL).requiresTool().strength(5.0F, 6.0F).sounds(BlockSoundGroup.METAL)));
-        COBEX_LOG = addBlock("cobex_log", new PillarBlock(QuiltBlockSettings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD)));
-        COBEX_PLANKS = addBlock("cobex_planks", new Block(QuiltBlockSettings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD)));
+        COBALT_ORE = addBlock("cobalt_ore", new OreBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(0, 2)));
+		HARDENED_COBALT_ORE = addBlock("hardened_cobalt_ore", new OreBlock(FabricBlockSettings.copy(COBALT_ORE).sounds(BlockSoundGroup.STONE).requiresTool().strength(4.5F, 3.0F), UniformIntProvider.create(0, 2)));
+		CORRUPTED_STONE = addBlock("corrupted_stone", new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 3.0F)));
+        COBALT_GRASS_BLOCK = addBlock("cobalt_grass_block", new CobaltGrassBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRASS)));
+        COBALT_DIRT = addBlock("cobalt_dirt", new Block(FabricBlockSettings.of(Material.SOIL).strength(0.5F).sounds(BlockSoundGroup.GRAVEL)));
+        COBALT_BLOCK = addBlock("cobalt_block", new Block(FabricBlockSettings.of(Material.METAL).requiresTool().strength(5.0F, 6.0F).sounds(BlockSoundGroup.METAL)));
+        COBEX_LOG = addBlock("cobex_log", new PillarBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD)));
+        COBEX_PLANKS = addBlock("cobex_planks", new Block(FabricBlockSettings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD)));
         COBEX_LEAVES = addBlock("cobex_leaves", createLeavesBlock());
 		TALL_COBEX_LEAVES = addBlock("tall_cobex_leaves", createLeavesBlock());
-		COBEX_SAPLING = addBlock("cobex_sapling", new CMSaplingBlock(new CobexSaplingGenerator(), QuiltBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
-		TALL_COBEX_SAPLING = addBlock("tall_cobex_sapling", new CMSaplingBlock(new TallCobexSaplingGenerator(), QuiltBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
-		BLUE_GRASS = addBlock("blue_grass", new CMFernBlock(QuiltBlockSettings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
-        CLEMATIS_FLOWER = addBlock("clematis_flower", new CMFernBlock(QuiltBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
-        BELL_FLOWER = addBlock("bell_flower", new CMFernBlock(QuiltBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
-        GLOW_FLOWER = addBlock("glow_flower", new CMFernBlock(QuiltBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque().luminance(10)));
-        RED_CABBAGE_CROP = addBlock("red_cabbage_crop", new RedCabbageBlock(QuiltBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)), false, true);
-        FARMLAND = addBlock("farmland", new CMFarmlandBlock(QuiltBlockSettings.of(Material.SOIL).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRAVEL).blockVision(CMBlocks::always).suffocates(CMBlocks::always)));
-        COBEX_TORCH = addBlock("cobex_torch", new TorchBlock(QuiltBlockSettings.of(Material.DECORATION).noCollision().breakInstantly().luminance(14).sounds(BlockSoundGroup.WOOD), ParticleTypes.FLAME), false, false);
-        COBEX_WALL_TORCH = addBlock("cobex_wall_torch", new WallTorchBlock(QuiltBlockSettings.of(Material.DECORATION).noCollision().breakInstantly().luminance(14).sounds(BlockSoundGroup.WOOD).dropsLike(COBEX_TORCH), ParticleTypes.FLAME), false, false);
+		COBEX_SAPLING = addBlock("cobex_sapling", new CMSaplingBlock(new CobexSaplingGenerator(), FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+		TALL_COBEX_SAPLING = addBlock("tall_cobex_sapling", new CMSaplingBlock(new TallCobexSaplingGenerator(), FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+		BLUE_GRASS = addBlock("blue_grass", new CMFernBlock(FabricBlockSettings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+        CLEMATIS_FLOWER = addBlock("clematis_flower", new CMFernBlock(FabricBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+        BELL_FLOWER = addBlock("bell_flower", new CMFernBlock(FabricBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+        GLOW_FLOWER = addBlock("glow_flower", new CMFernBlock(FabricBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque().luminance(10)));
+        RED_CABBAGE_CROP = addBlock("red_cabbage_crop", new RedCabbageBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)), false, true);
+        FARMLAND = addBlock("farmland", new CMFarmlandBlock(FabricBlockSettings.of(Material.SOIL).ticksRandomly().strength(0.6F).sounds(BlockSoundGroup.GRAVEL).blockVision(CMBlocks::always).suffocates(CMBlocks::always)));
+        COBEX_TORCH = addBlock("cobex_torch", new TorchBlock(FabricBlockSettings.of(Material.DECORATION).noCollision().breakInstantly().luminance(14).sounds(BlockSoundGroup.WOOD), ParticleTypes.FLAME), false, false);
+        COBEX_WALL_TORCH = addBlock("cobex_wall_torch", new WallTorchBlock(FabricBlockSettings.of(Material.DECORATION).noCollision().breakInstantly().luminance(14).sounds(BlockSoundGroup.WOOD).dropsLike(COBEX_TORCH), ParticleTypes.FLAME), false, false);
         COBEX_STAIR = addBlock("cobex_stairs", new StairsBlock(COBEX_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(COBEX_PLANKS)));
-        COBEX_SLAB = addBlock("cobex_slab", new SlabBlock(QuiltBlockSettings.of(Material.WOOD).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)));
-        COBALT_BRICK = addBlock("cobalt_brick", new Block(QuiltBlockSettings.of(Material.STONE).strength(2.0F).sounds(BlockSoundGroup.STONE)));
+        COBEX_SLAB = addBlock("cobex_slab", new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)));
+        COBALT_BRICK = addBlock("cobalt_brick", new Block(FabricBlockSettings.of(Material.STONE).strength(2.0F).sounds(BlockSoundGroup.STONE)));
         COBALT_BRICK_STAIR = addBlock("cobalt_brick_stairs", new StairsBlock(COBALT_BRICK.getDefaultState(), AbstractBlock.Settings.copy(COBALT_BRICK)));
-        COBALT_BRICK_SLAB = addBlock("cobalt_brick_slab", new SlabBlock(QuiltBlockSettings.of(Material.STONE).strength(2.0F, 3.0F).sounds(BlockSoundGroup.STONE)));
-        PORTAL_FRAME = addBlock("portal_frame", new Block(QuiltBlockSettings.of(Material.STONE).strength(-1.0F, 3600000.0F).dropsNothing()));
+        COBALT_BRICK_SLAB = addBlock("cobalt_brick_slab", new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(2.0F, 3.0F).sounds(BlockSoundGroup.STONE)));
+        PORTAL_FRAME = addBlock("portal_frame", new Block(FabricBlockSettings.of(Material.STONE).strength(-1.0F, 3600000.0F).dropsNothing()));
         HARDENED_CORRUPTED_STONE = addBlock("hardened_corrupted_stone", new Block(AbstractBlock.Settings.copy(CORRUPTED_STONE)));
-		BLUEBERRY_BUSH = addBlock("blueberry_bush", new BlueBerryBushBlock(QuiltBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)), false, false);
+		BLUEBERRY_BUSH = addBlock("blueberry_bush", new BlueBerryBushBlock(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)), false, false);
 
-		BLUE_VINE = addBlock("blue_vine", new VineBlock(QuiltBlockSettings.of(Material.REPLACEABLE_PLANT).noCollision().ticksRandomly().strength(0.2F).sounds(BlockSoundGroup.VINE)));
-		//COBEX_CHEST = addBlock("cobex_chest", new ChestBlock(QuiltBlockSettings.of(Material.WOOD).strength(2.5F).sounds(BlockSoundGroup.WOOD), () -> BlockEntityType.CHEST));
+		BLUE_VINE = addBlock("blue_vine", new VineBlock(FabricBlockSettings.of(Material.REPLACEABLE_PLANT).noCollision().ticksRandomly().strength(0.2F).sounds(BlockSoundGroup.VINE)));
+		//COBEX_CHEST = addBlock("cobex_chest", new ChestBlock(FabricBlockSettings.of(Material.WOOD).strength(2.5F).sounds(BlockSoundGroup.WOOD), () -> BlockEntityType.CHEST));
 	}
 
     private static <T extends Block> T addBlock(String name, T block) {
@@ -132,7 +131,7 @@ public class CMBlocks {
     private static <T extends Block> T addBlock(String name, T block, boolean addToItemGroup, boolean registerBlockItem) {
         Registry.register(Registry.BLOCK, new Identifier(CobaltMod.MOD_ID, name), block);
 
-        QuiltItemSettings itemSettings = new QuiltItemSettings();
+        FabricItemSettings itemSettings = new FabricItemSettings();
         if (addToItemGroup) {
             itemSettings.group(CobaltMod.BLOCK_GROUP);
         }
@@ -143,7 +142,7 @@ public class CMBlocks {
     }
 
     private static CMLeavesBlock createLeavesBlock() {
-        return new CMLeavesBlock(QuiltBlockSettings.of(Material.LEAVES).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque().allowsSpawning(CMBlocks::never).suffocates(CMBlocks::never).blockVision(CMBlocks::never));
+        return new CMLeavesBlock(FabricBlockSettings.of(Material.LEAVES).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque().allowsSpawning(CMBlocks::never).suffocates(CMBlocks::never).blockVision(CMBlocks::never));
     }
 
     private static boolean always(BlockState state, BlockView world, BlockPos pos) {

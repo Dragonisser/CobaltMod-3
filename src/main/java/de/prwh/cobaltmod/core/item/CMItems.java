@@ -5,10 +5,10 @@ import de.prwh.cobaltmod.core.block.BlueBerryBushBlock;
 import de.prwh.cobaltmod.core.block.CMBlocks;
 import de.prwh.cobaltmod.core.item.toolmaterial.CobaltToolMaterial;
 import de.prwh.cobaltmod.core.item.toolmaterial.CobexToolMaterial;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 public class CMItems {
 
@@ -109,8 +109,8 @@ public class CMItems {
         return Registry.register(Registry.ITEM, new Identifier(CobaltMod.MOD_ID, name), item);
     }
 
-    private static QuiltItemSettings giveDefaultQIS() {
-        return new QuiltItemSettings().group(CobaltMod.ITEM_GROUP);
+    private static FabricItemSettings giveDefaultQIS() {
+        return new FabricItemSettings().group(CobaltMod.ITEM_GROUP);
     }
 }
 
