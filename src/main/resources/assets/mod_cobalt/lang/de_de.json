@@ -1,5 +1,6 @@
 {
     "block.mod_cobalt.cobalt_ore": "Cobalterz",
+    "block.mod_cobalt.hardened_cobalt_ore": "Gehärtetes Cobalterz",
     "block.mod_cobalt.cobalt_grass_block": "Cobaltgrasblock",
     "block.mod_cobalt.cobalt_block": "Cobaltblock",
     "block.mod_cobalt.cobex_log": "Cobexstamm",
@@ -56,7 +57,7 @@
     "block.mod_cobalt.bluish_mushroom_small": "Bläulicher Pilz",
     "block.mod_cobalt.bluish_mushroom_big": "Bläulicher Pilz",
     "block.mod_cobalt.cobex_dead_bush": "Toter Busch",
-    "block.mod_cobalt.hardened_corrupted_stone": "Gehärteter korrumpierter Stein",
+    "block.mod_cobalt.hardened_corrupted_stone": "Gehärteter korrupter Stein",
     "block.mod_cobalt.portal_frame_caves": "Portalrahmen",
     "block.mod_cobalt.portal_caves": "Tiefe Höhlen Portal",
 
@@ -89,7 +90,7 @@
     "item.mod_cobalt.cobex_shovel": "Cobexholzschaufel",
     "item.mod_cobalt.cobex_sword": "Cobexholzschwert",
     "item.mod_cobalt.cobex_hoe": "Cobexholzhacke",
-    "item.mod_cobalt.cobalt_bow": "Cobaltbogen",
+    "item.mod_cobalt.cobex_bow": "Cobaltbogen",
     "item.mod_cobalt.cobalt_fertilizer": "Cobaltdünger",
     "item.mod_cobalt.cobalt_ingot": "Cobaltbarren",
     "item.mod_cobalt.raw_cobalt": "Rohcobalt",
@@ -116,7 +117,7 @@
     "item.mod_cobalt.purified_crushed_carthun_ore": "Gereinigtes zerstoßenes Carthunerz",
     "item.mod_cobalt.carthun_dust": "Carthunstaub",
     "item.mod_cobalt.carthun_dust_tiny": "Kleines Häufchen Carthunstaub",
-    "item.mod_cobalt.blue_slimeball": "Blauer Schleimball",
+    "item.mod_cobalt.blue_slime_ball": "Blauer Schleimball",
     "item.mod_cobalt.blue_wool": "Blauer Wollknäul",
     "item.mod_cobalt.blue_backpack": "Blauer Rucksack",
     "item.mod_cobalt.cobalt_plate_backpack": "Cobaltbrustpanzer Rucksack",
@@ -150,16 +151,17 @@
     "entity.mod_cobalt.BlueSlime": "Blauer Schleim",
 
 
-    "advancements.mod_cobalt.story.root.title": "Cobalt Mod",
+    "advancements.mod_cobalt.story.root.title": "Cobaldis",
     "advancements.mod_cobalt.story.root.description": "Finde die Seuche",
 
     "advancements.mod_cobalt.story.mine_cobalt_ore.title": "Blau wie alles andere",
-    "advancements.mod_cobalt.story.mine_cobalt_ore.description": "Baue etwas Cobalterz ab",
+    "advancements.mod_cobalt.story.mine_cobalt_ore.description": "Baue etwas mehr Cobalterz ab",
 
-    "advancements.mod_cobalt.story.to_cobaldis.title": "Die andere Seite",
-    "advancements.mod_cobalt.story.to_cobaldis.description": "Durchschreite das Portal zu Cobaldis",
+    "advancements.mod_cobalt.story.travel_to_cobaldis.title": "Die andere Seite",
+    "advancements.mod_cobalt.story.travel_to_cobaldis.description": "Durchschreite das Portal zu Cobaldis",
 
-
+    "advancements.mod_cobalt.story.pickup_red_cabbage.title": "It's not even red!",
+    "advancements.mod_cobalt.story.pickup_red_cabbage.description": "Find some Red Cabbage",
 
     "achievement.cobaltachiev": "Die Seuche",
     "achievement.cobaltachiev1": "Heiliges Erz",
@@ -203,10 +205,14 @@
 
     "death.attack.cobexarrow": "%1$s wurde von %2$s erschossen",
     "death.attack.cobexarrow.item": "%1$s wurde von %2$s mit %3$s erschossen",
-    "chatmessage.cobbaltchest.unlocked": "Ich habe die Kiste aufgeschlossen",
-    "chatmessage.cobbaltchest.key_required": "Sieht so aus, als bräuchte ich einen Schlüssel",
-    "chatmessage.cobbaltchest.key_wrong": "Ich brauchen einen Schlüssel und nicht",
+
+    "chatmessage.cobaltchest.unlocked": "Ich habe die Kiste aufgeschlossen",
+    "chatmessage.cobaltchest.key_required": "Sieht so aus, als bräuchte ich einen Schlüssel",
+    "chatmessage.cobaltchest.key_wrong": "Ich brauche einen Schlüssel und nicht",
 
     "key.backpack.desc": "Rucksack öffnen",
-    "key.cobaltmod.label": "CobaltMod"
+    "key.cobaltmod.label": "CobaltMod",
+
+    "text.autoconfig.mod_cobalt.title": "CobaltMod Config",
+    "text.autoconfig.mod_cobalt.option.test": "Does nothing for now"
 }

@@ -3,6 +3,7 @@ package de.prwh.cobaltmod.core.item;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import com.mojang.datafixers.util.Pair;
+import de.prwh.cobaltmod.core.block.CMBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -24,9 +25,10 @@ public class CMHoeItem extends MiningToolItem {
 	protected static final Map<Block, Pair<Predicate<ItemUsageContext>, Consumer<ItemUsageContext>>> TILLING_ACTIONS;
 
 	protected CMHoeItem(ToolMaterial toolMaterial, int i, float f, Item.Settings settings) {
-		super((float)i, f, toolMaterial, BlockTags.HOE_MINEABLE, settings);
+		super(i, f, toolMaterial, BlockTags.HOE_MINEABLE, settings);
 	}
 
+	@Override
 	public ActionResult useOnBlock(ItemUsageContext context) {
 		World world = context.getWorld();
 		BlockPos blockPos = context.getBlockPos();
@@ -73,8 +75,12 @@ public class CMHoeItem extends MiningToolItem {
 	}
 
 	static {
-		TILLING_ACTIONS = Maps.newHashMap(ImmutableMap.of(Blocks.GRASS_BLOCK, Pair.of(HoeItem::canTillFarmland, createTillAction(Blocks.FARMLAND.getDefaultState())), Blocks.DIRT_PATH, Pair.of(HoeItem::canTillFarmland, createTillAction(Blocks.FARMLAND.getDefaultState())), Blocks.DIRT, Pair.of(HoeItem::canTillFarmland, createTillAction(Blocks.FARMLAND.getDefaultState())), Blocks.COARSE_DIRT, Pair.of(HoeItem::canTillFarmland, createTillAction(Blocks.DIRT.getDefaultState())), Blocks.ROOTED_DIRT, Pair.of((itemUsageContext) -> {
-			return true;
-		}, createTillAndDropAction(Blocks.DIRT.getDefaultState(), Items.HANGING_ROOTS))));
+		TILLING_ACTIONS = Maps.newHashMap(Map.of(Blocks.GRASS_BLOCK, Pair.of(HoeItem::canTillFarmland, createTillAction(Blocks.FARMLAND.getDefaultState())),
+			Blocks.DIRT_PATH, Pair.of(HoeItem::canTillFarmland, createTillAction(Blocks.FARMLAND.getDefaultState())),
+			Blocks.DIRT, Pair.of(HoeItem::canTillFarmland, createTillAction(Blocks.FARMLAND.getDefaultState())),
+			Blocks.COARSE_DIRT, Pair.of(HoeItem::canTillFarmland, createTillAction(Blocks.DIRT.getDefaultState())),
+			CMBlocks.COBALT_GRASS_BLOCK, Pair.of(HoeItem::canTillFarmland, createTillAction(CMBlocks.FARMLAND.getDefaultState())),
+			CMBlocks.COBALT_DIRT, Pair.of(HoeItem::canTillFarmland, createTillAction(CMBlocks.FARMLAND.getDefaultState())),
+			Blocks.ROOTED_DIRT, Pair.of(itemUsageContext -> true, createTillAndDropAction(Blocks.DIRT.getDefaultState(), Items.HANGING_ROOTS))));
 	}
 }

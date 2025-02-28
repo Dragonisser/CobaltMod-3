@@ -10,7 +10,7 @@
         "config": {
           "to_place": {
             "type": "minecraft:noise_threshold_provider",
-            "seed": 2345,
+            "seed": 6234,
             "noise": {
               "firstOctave": 0,
               "amplitudes": [
