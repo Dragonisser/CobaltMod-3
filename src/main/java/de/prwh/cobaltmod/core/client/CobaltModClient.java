@@ -4,6 +4,7 @@ import de.prwh.cobaltmod.core.CobaltMod;
 import de.prwh.cobaltmod.core.block.CMBlocks;
 import de.prwh.cobaltmod.core.config.ModConfig;
 import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -11,11 +12,10 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.minecraft.client.particle.SuspendParticle;
 import net.minecraft.client.render.RenderLayer;
-import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 
-@Environment(EnvType.CLIENT)
 public class CobaltModClient implements ClientModInitializer {
 
+	@Environment(EnvType.CLIENT)
 	@Override
 	public void onInitializeClient() {
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),

@@ -2,20 +2,19 @@ package de.prwh.cobaltmod.core;
 
 import de.prwh.cobaltmod.core.api.CMReplace;
 import de.prwh.cobaltmod.core.block.CMBlocks;
-import de.prwh.cobaltmod.core.config.ModConfig;
 import de.prwh.cobaltmod.core.item.CMItems;
 import de.prwh.cobaltmod.core.world.gen.treedecorator.LeavesBlueVineTreeDecorator;
 import de.prwh.cobaltmod.mixin.TreeDecoratorTypeInvoker;
-import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.clothconfig2.api.ConfigBuilder;
+import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
+import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.DefaultParticleType;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.registry.Registry;
@@ -31,9 +30,6 @@ import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 
 public class CobaltMod implements ModInitializer {
 
@@ -100,7 +96,6 @@ public class CobaltMod implements ModInitializer {
 			.onlyLightInOverworld()
 			.registerPortal();
 
-
 		CMReplace.addBlocks(CMBlocks.COBALT_DIRT, CMBlocks.COBALT_GRASS_BLOCK);
 		CMReplace.addBlocks(Blocks.DIRT, CMBlocks.COBALT_GRASS_BLOCK);
 		CMReplace.addBlocks(Blocks.GRASS_BLOCK, CMBlocks.COBALT_GRASS_BLOCK);
@@ -116,8 +111,6 @@ public class CobaltMod implements ModInitializer {
 		CMReplace.addFlowers(CMBlocks.CLEMATIS_FLOWER);
 		CMReplace.addFlowers(CMBlocks.BELL_FLOWER);
 		CMReplace.addFlowers(CMBlocks.GLOW_FLOWER);
-
-
 	}
 
 	private static TreeFeatureConfig.Builder builder(Block log, Block leaves, int baseHeight, int firstRandomHeight, int secondRandomHeight, int radius) {
