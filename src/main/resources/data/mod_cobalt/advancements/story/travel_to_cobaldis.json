@@ -2,7 +2,7 @@
   "parent": "mod_cobalt:story/root",
   "display": {
     "icon": {
-      "item": "minecraft:flint_and_steel",
+      "item": "mod_cobalt:fire_shard",
       "nbt": "{Damage:0}"
     },
     "title": {
