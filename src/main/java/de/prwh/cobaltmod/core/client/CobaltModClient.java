@@ -10,6 +10,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.particle.SuspendParticle;
 import net.minecraft.client.render.RenderLayer;
 
@@ -33,6 +34,8 @@ public class CobaltModClient implements ClientModInitializer {
 
 		ParticleFactoryRegistry.getInstance().register(CobaltMod.COBALT_AURA, SuspendParticle.MyceliumFactory::new);
 
-		AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
+		if (FabricLoader.getInstance().isModLoaded("cloth-config")) {
+			AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
+		}
 	}
 }
