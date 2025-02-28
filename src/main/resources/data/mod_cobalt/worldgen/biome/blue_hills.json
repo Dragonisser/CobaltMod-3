@@ -30,6 +30,7 @@
     [],
     [
       "mod_cobalt:flower_default",
+      "mod_cobalt:ore_cobalt",
       "mod_cobalt:patch_grass_normal",
       "mod_cobalt:trees_cobex_forest"
     ],

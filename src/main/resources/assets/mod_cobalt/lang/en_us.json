@@ -1,5 +1,6 @@
 {
     "block.mod_cobalt.cobalt_ore": "Cobalt Ore",
+    "block.mod_cobalt.hardened_cobalt_ore": "Hardened Cobalt Ore",
     "block.mod_cobalt.cobalt_grass_block": "Cobalt Grass Block",
     "block.mod_cobalt.cobalt_block": "Block of Cobalt",
     "block.mod_cobalt.cobex_log": "Cobex Log",
@@ -204,10 +205,14 @@
 
     "death.attack.cobexarrow": "%1$s was shot by %2$s",
     "death.attack.cobexarrow.item": "%1$s was shot by %2$s using %3$s",
-    "chatmessage.cobbaltchest.unlocked": "I've unlocked the chest",
-    "chatmessage.cobbaltchest.key_required": "It's seems like i need a key",
-    "chatmessage.cobbaltchest.key_wrong": "I need a Key and not",
+
+    "chatmessage.cobaltchest.unlocked": "I've unlocked the chest",
+    "chatmessage.cobaltchest.key_required": "It's seems like i need a key",
+    "chatmessage.cobaltchest.key_wrong": "I need a Key and not",
 
     "key.backpack.desc": "Open Backpack",
-    "key.cobaltmod.label": "CobaltMod"
+    "key.cobaltmod.label": "CobaltMod",
+
+    "text.autoconfig.mod_cobalt.title": "CobaltMod Config",
+    "text.autoconfig.mod_cobalt.option.test": "Does nothing for now"
 }
