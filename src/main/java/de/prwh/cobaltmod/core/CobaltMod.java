@@ -57,9 +57,10 @@ public class CobaltMod implements ModInitializer {
 	public static final TreeDecoratorType<LeavesBlueVineTreeDecorator> LEAVES_BLUE_VINE_TREE_DECORATOR = TreeDecoratorTypeInvoker.callRegister("mod_cobalt:leaves_blue_vine_tree_decorator", LeavesBlueVineTreeDecorator.CODEC);
 
 	//FoodComponent
-	public static final FoodComponent BLUE_BERRY = (new FoodComponent.Builder()).hunger(1).saturationModifier(0.6F).build();
-	public static final FoodComponent RED_CABBAGE = (new FoodComponent.Builder()).hunger(2).saturationModifier(0.6F).build();
+	public static final FoodComponent BLUE_BERRY = (new FoodComponent.Builder()).hunger(1).saturationModifier(0.1F).build();
+	public static final FoodComponent RED_CABBAGE = (new FoodComponent.Builder()).hunger(2).saturationModifier(0.3F).build();
 	public static final FoodComponent COOKED_RED_CABBAGE = (new FoodComponent.Builder()).hunger(4).saturationModifier(0.6F).build();
+	public static final FoodComponent COBALT_APPLE = (new FoodComponent.Builder()).hunger(6).saturationModifier(0.8F).build();
 
 	public static RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> getTreeFeatureCobex() {
 		return COBEX;
